@@ -1,19 +1,30 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-type NestedNavbarProps = {
+type FuncArray = {
   subtitle: string;
   href: string;
 };
 
+type NestedNavbarProps = {
+  list: FuncArray[];
+  isOpen: boolean;
+  isNestedOpen: boolean;
+  toggleNavbar: (arg: boolean | null) => void;
+  toggleNestedState: (arg: boolean | null) => void;
+};
+
 const NestedNavbar = ({
   list,
-  isOpenNavbar,
-  toggleNested,
-}: {
-  list: NestedNavbarProps[];
-  isOpenNavbar: boolean;
-  toggleNested: boolean;
-}) => {
+  isOpen,
+  isNestedOpen,
+  toggleNavbar,
+  toggleNestedState,
+}: NestedNavbarProps) => {
+  const toggleBothNavbars = (): void => {
+    toggleNavbar(null);
+    toggleNestedState(null);
+  };
+
   const variants = {
     open: {
       height: "auto",
@@ -36,10 +47,10 @@ const NestedNavbar = ({
   };
 
   return (
-    isOpenNavbar &&
-    toggleNested && (
+    isOpen &&
+    isNestedOpen && (
       <AnimatePresence>
-        {toggleNested && (
+        {isNestedOpen && (
           <motion.ul
             className="nested-list"
             initial="closed"
@@ -47,10 +58,30 @@ const NestedNavbar = ({
             exit="closed"
             variants={variants}
           >
-            {list.map((element) => (
-              <li key={element.subtitle}>
-                <a href="">{element.subtitle}</a>
-              </li>
+            {list.map((element, idx) => (
+              <motion.li
+                key={element.subtitle}
+                className="nested-li-link"
+                initial={{
+                  scale: 0,
+                  opacity: 0,
+                }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 150,
+                  damping: 20,
+                  delay: 0.01 + idx / 10,
+                }}
+              >
+                <a
+                  href={element.href}
+                  onClick={toggleBothNavbars}
+                  className="link"
+                >
+                  {element.subtitle}
+                </a>
+              </motion.li>
             ))}
           </motion.ul>
         )}

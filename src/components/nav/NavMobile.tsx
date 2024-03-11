@@ -1,21 +1,37 @@
-import { useRef, useState } from "react";
-import logo from "../assets/logo_ptd.png";
+import logo from "../../assets/logo_ptd.png";
 import { Squash as Hamburger } from "hamburger-react";
 import { useClickAway } from "react-use";
-import { routes } from "../routes";
+import { routes } from "../../routes";
 import { IoIosArrowForward } from "react-icons/io";
-import NestedNavbar from "./NestedNavbar";
+import NestedNavbar from "../NestedNavbar";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Navbar = () => {
-  const [isOpen, setOpen] = useState<boolean>(false);
-  const [isNestedOpen, setNestedOpen] = useState<boolean>(false);
-  const refList = useRef<HTMLElement | null>(null);
+type NavMobileProps = {
+  refList: React.MutableRefObject<HTMLDivElement | null>;
+  isOpen: boolean;
+  toggleNavbar: (arg: boolean | null) => void;
+  isNestedOpen: boolean;
+  toggleNestedNavbar: (arg: boolean | null) => void;
+};
 
-  useClickAway(refList, (): void => setOpen(false));
+const NavbMobile = ({
+  refList,
+  isOpen,
+  toggleNavbar,
+  isNestedOpen,
+  toggleNestedNavbar,
+}: NavMobileProps) => {
+  function toggleBothNavbars(arg1: boolean | null, arg2: boolean | null) {
+    toggleNavbar(arg1);
+    toggleNestedNavbar(arg2);
+  }
+
+  useClickAway(refList, (): void => {
+    toggleBothNavbars(false, false);
+  });
 
   return (
-    <nav ref={refList}>
+    <nav ref={refList} className="nav-mobile">
       <img src={logo} alt="PTD logo" />
       <AnimatePresence>
         {isOpen && (
@@ -26,20 +42,18 @@ const Navbar = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <ul>
+            <ul className="outer-list">
               {routes.map((route, idx) => {
                 const { Icon, href, title, functions } = route;
                 return (
                   <motion.li
                     key={route.title}
+                    className="outer-li-link"
                     initial={{
                       scale: 0,
                       opacity: 0,
-                      backgroundColor: "#f5f9fc",
                     }}
                     animate={{ scale: 1, opacity: 1 }}
-                    whileTap={{ backgroundColor: "#fff" }}
-                    whileFocus={{ backgroundColor: "#fff" }}
                     transition={{
                       type: "spring",
                       stiffness: 260,
@@ -48,32 +62,38 @@ const Navbar = () => {
                     }}
                   >
                     <div className="link-wrapper">
-                      <a href="" onClick={(): void => setOpen((prev) => !prev)}>
-                        <span>{title}</span>
+                      <a
+                        href={href}
+                        onClick={() => toggleNavbar(null)}
+                        className="link"
+                      >
+                        {title}
                       </a>
                       {Icon && (
                         <motion.div
                           animate={{ rotate: isNestedOpen ? 180 : 0 }}
                           transition={{ duration: 0.2 }}
                           className="icon"
+                          onClick={() => toggleNestedNavbar(null)}
                         >
-                          <Icon
-                            onClick={(): void => setNestedOpen((prev) => !prev)}
-                          />
+                          <Icon />
                         </motion.div>
                       )}
                     </div>
                     {functions && (
                       <NestedNavbar
                         list={functions}
-                        isOpenNavbar={isOpen}
-                        toggleNested={isNestedOpen}
+                        isOpen={isOpen}
+                        isNestedOpen={isNestedOpen}
+                        toggleNavbar={toggleNavbar}
+                        toggleNestedState={toggleNestedNavbar}
                       />
                     )}
                   </motion.li>
                 );
               })}
               <motion.button
+                className="login-btn"
                 whileHover={{
                   boxShadow: "rgba(61, 127, 58, 0.5) 0px 2px 6px",
                 }}
@@ -91,9 +111,13 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
+      <Hamburger
+        toggled={isOpen}
+        size={20}
+        toggle={() => toggleBothNavbars(null, false)}
+      />
     </nav>
   );
 };
 
-export default Navbar;
+export default NavbMobile;
