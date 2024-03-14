@@ -3,8 +3,9 @@ import { Squash as Hamburger } from "hamburger-react";
 import { useClickAway } from "react-use";
 import { routes } from "../../routes";
 import { IoIosArrowForward } from "react-icons/io";
-import NestedNavbar from "../NestedNavbar";
+import NestedNavbar from "./NestedNavbar";
 import { AnimatePresence, motion } from "framer-motion";
+import style from "./navMobile.module.scss";
 
 type NavMobileProps = {
   refList: React.MutableRefObject<HTMLDivElement | null>;
@@ -31,24 +32,24 @@ const NavbMobile = ({
   });
 
   return (
-    <nav ref={refList} className="nav-mobile">
+    <nav ref={refList} className={style.nav}>
       <img src={logo} alt="PTD logo" />
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="list-wrapper"
+            className={style.listWrapper}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <ul className="outer-list">
+            <ul className={style.ul}>
               {routes.map((route, idx) => {
                 const { Icon, href, title, functions } = route;
                 return (
                   <motion.li
                     key={route.title}
-                    className="outer-li-link"
+                    className={style.li}
                     initial={{
                       scale: 0,
                       opacity: 0,
@@ -61,11 +62,11 @@ const NavbMobile = ({
                       delay: 0.1 + idx / 10,
                     }}
                   >
-                    <div className="link-wrapper">
+                    <div className={style.linkWrapper}>
                       <a
                         href={href}
                         onClick={() => toggleNavbar(null)}
-                        className="link"
+                        className={style.link}
                       >
                         {title}
                       </a>
@@ -73,7 +74,7 @@ const NavbMobile = ({
                         <motion.div
                           animate={{ rotate: isNestedOpen ? 180 : 0 }}
                           transition={{ duration: 0.2 }}
-                          className="icon"
+                          className={style.icon}
                           onClick={() => toggleNestedNavbar(null)}
                         >
                           <Icon />
@@ -93,7 +94,7 @@ const NavbMobile = ({
                 );
               })}
               <motion.button
-                className="login-btn"
+                className={style.button}
                 whileHover={{
                   boxShadow: "rgba(61, 127, 58, 0.5) 0px 2px 6px",
                 }}
@@ -105,7 +106,7 @@ const NavbMobile = ({
                 }}
               >
                 <span>Login</span>
-                <IoIosArrowForward className="icon" />
+                <IoIosArrowForward className={style.icon} />
               </motion.button>
             </ul>
           </motion.div>

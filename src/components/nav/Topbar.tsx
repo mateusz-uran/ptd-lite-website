@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import NavDesktop from "./nav/NavDesktop";
-import NavbMobile from "./nav/NavMobile";
+import NavDesktop from "./NavDesktop";
+import NavbMobile from "./NavMobile";
 
 const Topbar = () => {
   const refList = useRef<HTMLDivElement | null>(null);
@@ -38,7 +38,7 @@ const Topbar = () => {
   }, []);
 
   return (
-    <div className="topbar">
+    <>
       {!isNavMobileDisabled && (
         <NavbMobile
           refList={refList}
@@ -54,7 +54,7 @@ const Topbar = () => {
         isNestedOpen={isNestedOpen}
         toggleNestedNavbar={toggleNestedNavbar}
       />
-    </div>
+    </>
   );
 };
 

@@ -1,11 +1,11 @@
-import Home from "./components/Home";
-import Topbar from "./components/Topbar";
+import Hero from "./components/hero/Hero";
+import Topbar from "./components/nav/Topbar";
 
 function App() {
   return (
     <>
       <Topbar />
-      <Home />
+      <Hero />
     </>
   );
 }

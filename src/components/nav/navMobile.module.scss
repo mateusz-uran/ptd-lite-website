@@ -1,0 +1,65 @@
+@use "../../styles//mixin.scss" as mixin;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: mixin.$primary-color-gray;
+  height: 70px;
+  color: mixin.$font-black;
+  position: relative;
+
+  img {
+    max-height: 60px;
+  }
+
+  .listWrapper {
+    position: absolute;
+    top: 70px;
+    height: calc(60vh - 70px);
+    width: 100%;
+
+    .ul {
+      @include mixin.list-default();
+      background: mixin.$primary-color-gray;
+
+      height: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .li {
+        width: 100%;
+        padding: 0.8rem 0.3rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .linkWrapper {
+          display: flex;
+          align-items: center;
+          margin: 0.5rem 0;
+
+          .link {
+            @include mixin.link-default();
+            font-size: 13px;
+          }
+
+          .icon {
+            @include mixin.arrow-icon(mixin.$primary-color-gray, #000);
+            margin-left: 0.5rem;
+          }
+        }
+      }
+
+      .button {
+        @include mixin.primary-btn(mixin.$primary-color-gray);
+        margin-top: auto;
+        margin-bottom: 3rem;
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import style from "./nestedNavbar.module.scss";
 
 type FuncArray = {
   subtitle: string;
@@ -52,7 +53,7 @@ const NestedNavbar = ({
       <AnimatePresence>
         {isNestedOpen && (
           <motion.ul
-            className="nested-list"
+            className={style.ul}
             initial="closed"
             animate="open"
             exit="closed"
@@ -61,7 +62,7 @@ const NestedNavbar = ({
             {list.map((element, idx) => (
               <motion.li
                 key={element.subtitle}
-                className="nested-li-link"
+                className={style.li}
                 initial={{
                   scale: 0,
                   opacity: 0,
@@ -77,7 +78,7 @@ const NestedNavbar = ({
                 <a
                   href={element.href}
                   onClick={toggleBothNavbars}
-                  className="link"
+                  className={style.link}
                 >
                   {element.subtitle}
                 </a>

@@ -1,8 +1,9 @@
 import logo from "../../assets/logo_ptd.png";
 import { routes } from "../../routes";
-import NestedNavbar from "../NestedNavbar";
+import NestedNavbar from "./NestedNavbar";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
+import style from "./navDesktop.module.scss";
 
 type NavDesktopProps = {
   isOpen: boolean;
@@ -18,20 +19,20 @@ const NavDesktop = ({
   toggleNestedNavbar,
 }: NavDesktopProps) => {
   return (
-    <nav className="nav-desktop">
+    <nav className={style.nav}>
       <a href="">
         <img src={logo} alt="PTD logo" />
       </a>
-      <div className="list-wrapper">
-        <ul className="outer-list">
+      <div className={style.listWrapper}>
+        <ul className={style.ul}>
           {routes.map((route) => {
             const { Icon, href, title, functions } = route;
             return (
-              <motion.li key={route.title} className="outer-li-link">
-                <div className="link-wrapper">
+              <motion.li key={route.title} className={style.outerLiLink}>
+                <div className={style.linkWrapper}>
                   <motion.a
                     href={href}
-                    className="link"
+                    className={style.link}
                     initial={{ backgroundColor: "#30373a" }}
                     whileHover={{ backgroundColor: "#222729" }}
                     transition={{ duration: 0.2 }}
@@ -42,7 +43,7 @@ const NavDesktop = ({
                     <motion.div
                       animate={{ rotate: isNestedOpen ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
-                      className="icon"
+                      className={style.icon}
                       onClick={() => {
                         toggleNavbar(null);
                         toggleNestedNavbar(null);
@@ -65,7 +66,7 @@ const NavDesktop = ({
             );
           })}
           <motion.button
-            className="login-btn"
+            className={style.button}
             whileHover={{
               boxShadow: "rgba(61, 127, 58, 0.5) 0px 2px 6px",
             }}
