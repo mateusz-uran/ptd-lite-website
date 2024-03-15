@@ -1,4 +1,5 @@
 @use "../../styles//mixin.scss" as mixin;
+@import "../../styles/variables.scss";
 
 .ul {
   @include mixin.list-default();
@@ -9,7 +10,7 @@
     margin: 0.3rem 0;
     .link {
       @include mixin.link-default();
-      font-size: 11px;
+      font-size: $font-micro;
     }
   }
 }
@@ -28,7 +29,7 @@
       margin: 0.3rem 0;
       .link {
         @include mixin.link-default();
-        font-size: 11px;
+        font-size: $font-micro;
         color: #30373a;
         font-weight: 600;
       }

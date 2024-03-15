@@ -15,29 +15,6 @@ $font-black: #000;
   color: inherit;
 }
 
-@mixin primary-btn($bg-color) {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  border-radius: 25px;
-  border: 0;
-  outline: 0;
-  color: $primary-color-green;
-  background: $bg-color;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  box-shadow: rgba(61, 127, 58, 0.25) 0px 2px 4px;
-
-  .icon {
-    margin-left: 0.5rem;
-  }
-}
-
 @mixin arrow-icon($bg-color, $color) {
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -50,6 +27,11 @@ $font-black: #000;
   &:hover {
     cursor: pointer;
   }
+}
+
+@mixin wrapper {
+  max-width: 75rem;
+  padding: 1rem;
 }
 
 @mixin desktop {

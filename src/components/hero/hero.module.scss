@@ -1,4 +1,57 @@
-.test {
-  background: green;
-  height: 30vh;
+@use "../../styles/mixin.scss" as mixin;
+@import "../../styles/variables.scss";
+
+.section {
+  display: flex;
+  justify-content: center;
+  background-image: url("/images/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .wrapper {
+    @include mixin.wrapper();
+
+    .side {
+      .h2 {
+        font-size: $font-big;
+        margin-top: 1.5rem;
+        color: $font-dark-gray;
+      }
+
+      .p {
+        font-size: $font-medium;
+        color: $font-gray;
+        font-weight: 400;
+      }
+
+      .h2,
+      .p,
+      .btnWrapper {
+        padding: 1rem;
+      }
+    }
+  }
+
+  @include mixin.desktop() {
+    .wrapper {
+      display: flex;
+      margin-top: 3rem;
+      align-items: center;
+
+      .side {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &.textSide {
+          width: 40%;
+        }
+
+        &.imgSide {
+          width: 60%;
+        }
+      }
+    }
+  }
 }

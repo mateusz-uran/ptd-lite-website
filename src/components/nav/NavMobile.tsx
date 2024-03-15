@@ -1,11 +1,11 @@
-import logo from "../../assets/logo_ptd.png";
+import logo from "/images/logo_ptd.png";
 import { Squash as Hamburger } from "hamburger-react";
 import { useClickAway } from "react-use";
 import { routes } from "../../routes";
-import { IoIosArrowForward } from "react-icons/io";
 import NestedNavbar from "./NestedNavbar";
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./navMobile.module.scss";
+import Button from "../button/Button";
 
 type NavMobileProps = {
   refList: React.MutableRefObject<HTMLDivElement | null>;
@@ -93,21 +93,9 @@ const NavbMobile = ({
                   </motion.li>
                 );
               })}
-              <motion.button
-                className={style.button}
-                whileHover={{
-                  boxShadow: "rgba(61, 127, 58, 0.5) 0px 2px 6px",
-                }}
-                whileTap={{ scale: 0.98 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 16,
-                }}
-              >
-                <span>Login</span>
-                <IoIosArrowForward className={style.icon} />
-              </motion.button>
+              <div className={style.buttonWrapper}>
+                <Button text={"Login"} />
+              </div>
             </ul>
           </motion.div>
         )}

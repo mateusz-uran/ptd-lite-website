@@ -1,4 +1,5 @@
 @use "../../styles//mixin.scss" as mixin;
+@import "../../styles/variables.scss";
 
 .nav {
   display: flex;
@@ -16,7 +17,7 @@
   .listWrapper {
     position: absolute;
     top: 70px;
-    height: calc(60vh - 70px);
+    height: calc(80vh - 70px);
     width: 100%;
 
     .ul {
@@ -44,7 +45,7 @@
 
           .link {
             @include mixin.link-default();
-            font-size: 13px;
+            font-size: $font-small;
           }
 
           .icon {
@@ -54,11 +55,10 @@
         }
       }
 
-      .button {
-        @include mixin.primary-btn(mixin.$primary-color-gray);
+      .buttonWrapper {
         margin-top: auto;
         margin-bottom: 3rem;
-        font-size: 13px;
+        border-radius: 25px;
       }
     }
   }
