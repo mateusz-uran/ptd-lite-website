@@ -60,3 +60,19 @@ h6 {
 #__next {
   isolation: isolate;
 }
+/*
+  9. Custom
+*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border: 0;
+  outline: 0;
+}

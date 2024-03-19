@@ -1,11 +1,11 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
 
-type ButtonProps = {
+type PrimaryButtonProps = {
   text: string;
 };
 
-const Button = ({ text }: ButtonProps) => {
+const PrimaryButton = ({ text }: PrimaryButtonProps) => {
   return (
     <motion.button
       whileHover={{
@@ -25,4 +25,4 @@ const Button = ({ text }: ButtonProps) => {
   );
 };
 
-export default Button;
+export default PrimaryButton;

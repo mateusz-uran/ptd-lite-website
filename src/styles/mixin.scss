@@ -34,6 +34,10 @@ $font-black: #000;
   padding: 1rem;
 }
 
+@mixin contentWrapper {
+  margin: 1rem;
+}
+
 @mixin desktop {
   @media (min-width: 840px) {
     @content;

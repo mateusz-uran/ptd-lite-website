@@ -3,7 +3,7 @@ import { routes } from "../../routes";
 import NestedNavbar from "./NestedNavbar";
 import { motion } from "framer-motion";
 import style from "./navDesktop.module.scss";
-import Button from "../button/Button";
+import PrimaryButton from "../buttons/PrimaryButton";
 
 type NavDesktopProps = {
   isOpen: boolean;
@@ -78,7 +78,7 @@ const NavDesktop = ({
                 damping: 16,
               }}
             >
-              <Button text={"Login"} />
+              <PrimaryButton text={"Login"} />
             </motion.div>
           </ul>
         </div>

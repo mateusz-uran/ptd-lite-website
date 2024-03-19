@@ -28,7 +28,7 @@
       .h2,
       .p,
       .btnWrapper {
-        padding: 1rem;
+        @include mixin.contentWrapper();
       }
     }
   }

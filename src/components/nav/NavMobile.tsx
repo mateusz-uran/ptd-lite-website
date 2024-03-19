@@ -5,7 +5,7 @@ import { routes } from "../../routes";
 import NestedNavbar from "./NestedNavbar";
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./navMobile.module.scss";
-import Button from "../button/Button";
+import PrimaryButton from "../buttons/PrimaryButton";
 
 type NavMobileProps = {
   refList: React.MutableRefObject<HTMLDivElement | null>;
@@ -94,7 +94,7 @@ const NavbMobile = ({
                 );
               })}
               <div className={style.buttonWrapper}>
-                <Button text={"Login"} />
+                <PrimaryButton text={"Login"} />
               </div>
             </ul>
           </motion.div>

@@ -1,5 +1,5 @@
 import { content } from "../../content/heroContent";
-import Button from "../button/Button";
+import Button from "../buttons/PrimaryButton";
 import dashboard from "/images/dashboard_framed.png";
 import style from "./hero.module.scss";
 import { motion } from "framer-motion";
