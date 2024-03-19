@@ -13,7 +13,7 @@ const Hero = () => {
             <motion.h2
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, type: "spring" }}
+              transition={{ duration: 1, type: "spring" }}
               className={style.h2}
             >
               {content.header}
@@ -21,7 +21,7 @@ const Hero = () => {
             <motion.p
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, type: "spring" }}
+              transition={{ duration: 1.1, type: "spring" }}
               className={style.p}
             >
               {content.paragraph}
@@ -29,7 +29,7 @@ const Hero = () => {
             <motion.div
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.9, type: "spring" }}
+              transition={{ duration: 1.2, type: "spring" }}
               className={style.btnWrapper}
             >
               <Button text={"get started"} />
