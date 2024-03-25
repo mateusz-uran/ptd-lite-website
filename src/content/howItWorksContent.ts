@@ -2,7 +2,7 @@ import { IoIosCreate } from "react-icons/io";
 import { FaRoad } from "react-icons/fa6";
 import { BsFillFuelPumpDieselFill } from "react-icons/bs";
 import { FaFilePdf } from "react-icons/fa6";
-import { GrFormView } from "react-icons/gr";
+import { FaHourglassStart } from "react-icons/fa";
 
 export const steps = [
   {
@@ -24,13 +24,13 @@ export const steps = [
     image: "./images/add_fuels2.png",
   },
   {
-    Icon: FaFilePdf,
+    Icon: FaHourglassStart,
     explanation:
       "Po dodaniu wszystkich potrzebnych informacji generuj plik PDF gotowy do pobrania.",
     image: "./images/generate_pdf.png",
   },
   {
-    Icon: GrFormView,
+    Icon: FaFilePdf,
     explanation:
       "Aplikacja formatuje dodane informację o trasach, ładunkach i tanowaniach w gotowy plik PDF, który można pobrać i wydrukować.",
     image: "./images/pdf_ready2.png",

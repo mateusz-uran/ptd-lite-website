@@ -2,6 +2,7 @@ import { useState } from "react";
 import style from "./howItWorks.module.scss";
 import HowItWorksMobile from "./HowItWorksMobile";
 import { motion } from "framer-motion";
+import HowItWorksDesktop from "./HowItWorksDesktop";
 
 const HowItWorks = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
@@ -23,6 +24,7 @@ const HowItWorks = () => {
       >
         <h2 className={style.h2}>Jak to działa?</h2>
         <HowItWorksMobile />
+        <HowItWorksDesktop />
       </motion.div>
     </section>
   );
