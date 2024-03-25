@@ -15,7 +15,7 @@
   }
 }
 
-@include mixin.desktop {
+@include mixin.tablet {
   .ul {
     @include mixin.list-default();
     background: mixin.$primary-color-gray;

@@ -5,7 +5,7 @@
   display: none;
 }
 
-@include mixin.desktop() {
+@include mixin.tablet() {
   .nav {
     background: mixin.$primary-color-dark;
     color: mixin.$font-gray;

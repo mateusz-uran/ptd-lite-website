@@ -44,9 +44,9 @@ const HowItWorksDesktop = () => {
           key={steps[selectedIcon].image}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.2, type: "spring" }}
+          transition={{ duration: 1 }}
           src={steps[selectedIcon].image}
-          alt=""
+          alt="ptd lite step"
         />
       </div>
     </section>

@@ -43,11 +43,11 @@ const HowItWorksMobile = () => {
       <div className={style.laptop}>
         <motion.img
           key={steps[selectedIcon].image}
-          src={steps[selectedIcon].image}
-          alt="ptd lite step"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.6 }}
+          alt="ptd lite step"
+          src={steps[selectedIcon].image}
         />
       </div>
     </div>

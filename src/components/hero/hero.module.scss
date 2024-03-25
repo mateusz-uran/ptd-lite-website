@@ -33,7 +33,7 @@
     }
   }
 
-  @include mixin.desktop() {
+  @include mixin.tablet() {
     .wrapper {
       display: flex;
       margin-top: 3rem;

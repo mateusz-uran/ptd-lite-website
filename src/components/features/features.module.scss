@@ -76,7 +76,7 @@
   }
 }
 
-@include mixin.desktop() {
+@include mixin.tablet() {
   .section {
     display: flex;
     justify-content: center;

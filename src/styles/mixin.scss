@@ -38,8 +38,14 @@ $font-black: #000;
   margin: 1rem;
 }
 
-@mixin desktop {
+@mixin tablet {
   @media (min-width: 840px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
     @content;
   }
 }
