@@ -16,6 +16,8 @@
 
     .mobileWrapper {
       max-width: 550px;
+      position: relative;
+      min-height: 400px;
 
       .iconsRow,
       .dotsRow {
@@ -68,10 +70,16 @@
         font-weight: 600;
         color: variables.$font-gray;
         margin: 1rem 0;
+        // margin-bottom: 0;
+        // padding-bottom: 0;
 
         .p {
           min-height: 80px;
         }
+      }
+
+      .laptop {
+        min-height: 250px;
       }
     }
   }

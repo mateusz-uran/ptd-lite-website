@@ -1,18 +1,14 @@
 import style from "./howItWorks.module.scss";
 import { useState } from "react";
 import { steps } from "../../content/howItWorksContent";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
-interface HowItWorksMobileProps {
-  variants: Variants;
-}
-
-const HowItWorksMobile = ({ variants }: HowItWorksMobileProps) => {
+const HowItWorksMobile = () => {
   const [selectedIcon, setSelectedIcon] = useState<number>(0);
 
   return (
     <div className={style.mobileWrapper}>
-      <motion.div variants={variants} className={style.iconsRow}>
+      <div className={style.iconsRow}>
         {steps.map((step, index) => (
           <step.Icon
             key={index}
@@ -22,8 +18,8 @@ const HowItWorksMobile = ({ variants }: HowItWorksMobileProps) => {
             onClick={() => setSelectedIcon(index)}
           />
         ))}
-      </motion.div>
-      <motion.div variants={variants} className={style.dotsRow}>
+      </div>
+      <div className={style.dotsRow}>
         {steps.map((_, index) => (
           <span
             key={index}
@@ -33,15 +29,18 @@ const HowItWorksMobile = ({ variants }: HowItWorksMobileProps) => {
             onClick={() => setSelectedIcon(index)}
           ></span>
         ))}
-      </motion.div>
-      <motion.div
-        key={steps[selectedIcon].explanation}
-        className={style.explanation}
-        variants={variants}
-      >
-        <p className={style.p}>{steps[selectedIcon].explanation}</p>
-      </motion.div>
-      <motion.div variants={variants} className={style.laptop}>
+      </div>
+      <div key={steps[selectedIcon].explanation} className={style.explanation}>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className={style.p}
+        >
+          {steps[selectedIcon].explanation}
+        </motion.p>
+      </div>
+      <div className={style.laptop}>
         <motion.img
           key={steps[selectedIcon].image}
           src={steps[selectedIcon].image}
@@ -50,7 +49,7 @@ const HowItWorksMobile = ({ variants }: HowItWorksMobileProps) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.2 }}
         />
-      </motion.div>
+      </div>
     </div>
   );
 };
