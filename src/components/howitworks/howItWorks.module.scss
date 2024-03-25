@@ -11,6 +11,12 @@
     flex-direction: column;
     align-items: center;
 
+    .h2,
+    .mobileWrapper,
+    .desktopWrapper {
+      @include mixin.contentWrapper();
+    }
+
     .h2 {
       text-align: center;
       color: variables.$font-dark-gray;
@@ -74,12 +80,14 @@
         margin: 1rem 0;
 
         .p {
-          min-height: 80px;
+          height: 80px;
         }
       }
 
       .laptop {
-        min-height: 250px;
+        display: flex;
+        justify-content: center;
+        height: 300px;
       }
     }
 
@@ -93,82 +101,115 @@
       }
 
       .desktopWrapper {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-        .wrapper {
-          flex-direction: row;
-          justify-content: center;
+        .stepsWrapper {
+          width: 40%;
 
-          .stepsWrapper {
-            width: 40%;
+          .singleStep {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
 
-            .singleStep {
-              display: grid;
-              grid-template-columns: auto auto auto;
+            .icon {
+              font-size: variables.$font-medium;
+              min-width: 50px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+
+            .icon.selected {
+              color: variables.$primary-color-green;
+              font-size: variables.$font-big;
+            }
+
+            .dotWrapper {
+              min-width: 50px;
+              display: flex;
+              justify-content: center;
+              position: relative;
+              height: 100%;
               align-items: center;
 
-              .icon {
-                font-size: variables.$font-medium;
-                min-width: 50px;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 1px;
+                background: variables.$font-gray;
+                left: 50%;
+                z-index: -1;
+              }
+
+              .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: variables.$font-gray;
                 cursor: pointer;
                 transition: all 0.3s ease;
               }
 
-              .icon.selected {
-                color: variables.$primary-color-green;
-                font-size: variables.$font-big;
+              .dot.selected {
+                background: variables.$primary-color-green;
+                width: 12px;
+                height: 12px;
               }
+            }
 
-              .dotWrapper {
-                min-width: 50px;
-                display: flex;
-                justify-content: center;
-                position: relative;
-                height: 100%;
-                align-items: center;
+            .p {
+              padding: 1rem;
+              font-size: variables.$font-small;
+              cursor: pointer;
+              font-weight: 600;
+            }
 
-                &::after {
-                  content: "";
-                  position: absolute;
-                  height: 100%;
-                  width: 1px;
-                  background: variables.$font-gray;
-                  left: 50%;
-                  z-index: -1;
-                }
-
-                .dot {
-                  width: 10px;
-                  height: 10px;
-                  border-radius: 50%;
-                  background: variables.$font-gray;
-                  cursor: pointer;
-                  transition: all 0.3s ease;
-                }
-
-                .dot.selected {
-                  background: variables.$primary-color-green;
-                  width: 12px;
-                  height: 12px;
-                }
-              }
-
-              .p {
-                padding: 1rem;
-                font-size: variables.$font-small;
-                cursor: pointer;
-                font-weight: 600;
-              }
-
-              .p.selected {
-                color: variables.$primary-color-green;
-              }
+            .p.selected {
+              color: variables.$primary-color-green;
             }
           }
         }
 
         .laptop {
           width: 60%;
+          min-width: 35rem;
+        }
+      }
+    }
+
+    .ending {
+      width: 100%;
+      margin: 1.5rem 0;
+      padding: 0 0.5rem;
+
+      .h4 {
+        color: variables.$font-dark-gray;
+        font-size: variables.$font-small;
+        margin: 1rem 0;
+      }
+
+      .listsWrapper {
+        display: flex;
+        .ul {
+          @include mixin.list-default();
+          list-style-type: "❯";
+          margin-right: 1rem;
+          width: 50%;
+
+          .li {
+            font-size: variables.$font-micro;
+            margin-left: 0.5rem;
+            padding: 0.5rem;
+            font-weight: 600;
+            max-width: 80%;
+
+            &::marker {
+              color: variables.$primary-color-green;
+              font-size: variables.$font-small;
+            }
+          }
         }
       }
     }
