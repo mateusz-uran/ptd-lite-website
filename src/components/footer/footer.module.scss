@@ -1,0 +1,121 @@
+@use "../../styles/mixin.scss" as mixin;
+@import "../../styles/variables.scss";
+
+.footer {
+  background-color: $primary-color-dark;
+  padding-bottom: 2rem;
+  min-height: 30vh;
+
+  .wrapper {
+    @include mixin.wrapper();
+    display: flex;
+    flex-direction: column;
+
+    .leftSide,
+    .rightSide {
+      @include mixin.contentWrapper();
+    }
+
+    .leftSide {
+      display: flex;
+      flex-direction: column;
+
+      .logoWrapper,
+      .rights,
+      .socials {
+        margin: 0.5rem 0;
+      }
+
+      .logoWrapper {
+        img {
+          height: 40px;
+        }
+      }
+
+      .rights {
+        font-size: $font-small;
+        color: $font-bright;
+      }
+
+      .socials {
+        display: flex;
+        font-size: $font-medium;
+        color: $font-bright;
+
+        a:last-child {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .rightSide {
+      display: flex;
+      flex-wrap: wrap;
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0;
+
+        h5 {
+          margin-bottom: 1rem;
+          font-weight: 600;
+          font-size: $font-small;
+          color: $font-bright;
+          // text-wrap: nowrap;
+        }
+
+        ul {
+          @include mixin.list-default();
+
+          li {
+            font-size: $font-micro;
+            margin: 0.5rem 0;
+            color: $font-bright;
+            text-wrap: nowrap;
+            a {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mixin.tablet() {
+  .footer {
+    display: flex;
+    justify-content: center;
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      .leftSide,
+      .rightSide {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+      }
+
+      .rightSide {
+        flex-wrap: nowrap;
+        .column {
+          height: 100%;
+          padding: 0 0.5rem;
+          h5 {
+            min-height: 75px;
+          }
+          ul {
+            li {
+              margin-top: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import logo from "/images/logo_ptd.png";
+import logo from "/images/logo_ptd2.png";
 import { routes } from "../../routes";
 import NestedNavbar from "./NestedNavbar";
 import { motion } from "framer-motion";

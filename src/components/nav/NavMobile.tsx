@@ -1,4 +1,4 @@
-import logo from "/images/logo_ptd.png";
+import logo from "/images/logo_ptd2.png";
 import { Squash as Hamburger } from "hamburger-react";
 import { useClickAway } from "react-use";
 import { routes } from "../../routes";
