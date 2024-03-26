@@ -85,6 +85,7 @@
         display: flex;
         justify-content: center;
         min-height: 325px;
+        align-items: center;
       }
     }
 
@@ -188,6 +189,7 @@
       width: 100%;
       margin: 1.5rem 0;
       padding: 0 0.5rem;
+      @include mixin.contentWrapper();
 
       .h4 {
         color: variables.$font-dark-gray;
@@ -197,15 +199,16 @@
 
       .listsWrapper {
         display: flex;
+
         .ul {
           @include mixin.list-default();
           list-style-type: "❯";
-          margin-right: 1rem;
-          width: 50%;
+          columns: 1;
+          -webkit-columns: 1;
+          -moz-columns: 1;
 
           .li {
             font-size: variables.$font-micro;
-            margin-left: 0.5rem;
             padding: 0.5rem;
             font-weight: 600;
             max-width: 80%;
@@ -214,6 +217,14 @@
               color: variables.$primary-color-green;
               font-size: variables.$font-small;
             }
+          }
+        }
+
+        @include mixin.tablet() {
+          .ul {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
           }
         }
       }

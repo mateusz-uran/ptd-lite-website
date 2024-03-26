@@ -39,8 +39,6 @@ const HowItWorks = () => {
                 przebiegu końcowego i początkowego.
               </li>
               <li className={style.li}>Wszystko można edytować.</li>
-            </ul>
-            <ul className={style.ul}>
               <li className={style.li}>
                 Możliwość tworzenia szablonów do faktur.
               </li>
