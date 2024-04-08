@@ -6,6 +6,7 @@ import NestedNavbar from "./NestedNavbar";
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./navMobile.module.scss";
 import PrimaryButton from "../buttons/PrimaryButton";
+import { Link } from "react-router-dom";
 
 type NavMobileProps = {
   refList: React.MutableRefObject<HTMLDivElement | null>;
@@ -46,6 +47,7 @@ const NavbMobile = ({
             <ul className={style.ul}>
               {routes.map((route, idx) => {
                 const { Icon, href, title, functions } = route;
+
                 return (
                   <motion.li
                     key={route.title}
@@ -63,13 +65,15 @@ const NavbMobile = ({
                     }}
                   >
                     <div className={style.linkWrapper}>
-                      <a
-                        href={href}
-                        onClick={() => toggleNavbar(null)}
+                      <Link
+                        to={href}
+                        onClick={() => {
+                          toggleNavbar(null);
+                        }}
                         className={style.link}
                       >
                         {title}
-                      </a>
+                      </Link>
                       {Icon && (
                         <motion.div
                           animate={{ rotate: isNestedOpen ? 180 : 0 }}

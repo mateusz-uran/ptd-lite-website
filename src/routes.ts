@@ -3,37 +3,37 @@ import { IoIosArrowDown } from "react-icons/io";
 export const routes = [
   {
     title: "Funkcje",
-    href: "#",
+    href: "/features",
     Icon: IoIosArrowDown,
     functions: [
       {
         subtitle: "Ładunek",
-        href: "#",
+        href: "ladunek",
       },
       {
         subtitle: "Faktura",
-        href: "#",
+        href: "faktura",
       },
       {
         subtitle: "Statystyki",
-        href: "#",
+        href: "statystyki",
       },
       {
         subtitle: "Archiwum",
-        href: "#",
+        href: "archiwum",
       },
       {
         subtitle: "Aktualizacje",
-        href: "#",
+        href: "aktualizacje",
       },
     ],
   },
   {
     title: "Jak to działa",
-    href: "#",
+    href: "/",
   },
   {
     title: "Kontakt",
-    href: "#",
+    href: "/",
   },
 ];

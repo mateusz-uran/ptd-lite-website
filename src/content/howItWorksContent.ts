@@ -4,6 +4,35 @@ import { BsFillFuelPumpDieselFill } from "react-icons/bs";
 import { FaFilePdf } from "react-icons/fa6";
 import { FaHourglassStart } from "react-icons/fa";
 
+export const smallSteps = [
+  {
+    Icon: IoIosCreate,
+    explanation: "Wpisz nazwę karty w polu. ",
+    image: "./images/add_card3.png",
+  },
+  {
+    Icon: FaRoad,
+    explanation:
+      "Dodaj trasy, aplikacja przenosi powtarzalne informacje co przyspiesza cały proces.",
+    image: "./images/add_trip4.png",
+  },
+  {
+    Icon: BsFillFuelPumpDieselFill,
+    explanation: "Dodaj informację o tankowaniach tj. ropa/benzyna/adBlue.",
+    image: "./images/add_fuels3.png",
+  },
+  {
+    Icon: FaHourglassStart,
+    explanation: "Generuj plik PDF gotowy do pobrania.",
+    image: "./images/generate_pdf2.png",
+  },
+  {
+    Icon: FaFilePdf,
+    explanation: "Pobierz sformatowany plik PDF.",
+    image: "./images/pdf_ready3.png",
+  },
+];
+
 export const steps = [
   {
     Icon: IoIosCreate,

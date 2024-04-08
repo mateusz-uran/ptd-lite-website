@@ -86,7 +86,7 @@
           margin: 1rem 0;
 
           .p {
-            min-height: 70px;
+            min-height: 50px;
           }
         }
 
@@ -124,6 +124,7 @@
               display: grid;
               grid-template-columns: auto auto auto;
               align-items: center;
+              justify-content: flex-start;
 
               .icon {
                 font-size: $font-medium;

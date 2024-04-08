@@ -12,7 +12,8 @@ export const features = [
     Icon: PiStackOverflowLogoBold,
     darkColor: "#EC0868",
     lightColor: "#fde6f0",
-    moreInfoLink: "#",
+    moreInfoLink: "ladunek",
+    featureImage: "/images/features/ladunek.png",
   },
   {
     header: "Wygeneruj dane do faktury z przejechanej trasy.",
@@ -20,7 +21,8 @@ export const features = [
     Icon: FaFileInvoiceDollar,
     darkColor: "#FFA400",
     lightColor: "#fff6e6",
-    moreInfoLink: "#",
+    moreInfoLink: "faktura",
+    featureImage: "/images/features/faktura.png",
   },
   {
     header: "Stwórz dokument przewozowy czyli CMRkę z poziomu aplikacji.",
@@ -28,7 +30,8 @@ export const features = [
     Icon: GrDocumentText,
     darkColor: "#a080a0",
     lightColor: "#faf1fa",
-    moreInfoLink: "#",
+    moreInfoLink: "cmr",
+    featureImage: "/images/features/cmr.png",
   },
   {
     header: "Śledź statystyki ze swoich przejazdów.",
@@ -36,7 +39,8 @@ export const features = [
     Icon: ImStatsDots,
     darkColor: "#595ca8",
     lightColor: "#d4d5f2",
-    moreInfoLink: "#",
+    moreInfoLink: "statystyki",
+    featureImage: "/images/features/stats.png",
   },
   {
     header: "Wracaj do starych kart drogowych.",
@@ -44,7 +48,8 @@ export const features = [
     Icon: BiSolidFileArchive,
     darkColor: "#5FAD41",
     lightColor: "#eff7ec",
-    moreInfoLink: "#",
+    moreInfoLink: "archiwum",
+    featureImage: "/images/features/arch.png",
   },
   {
     header: "Dostęp do listy z nowymi funkcjami i aktualizacjami poprawek.",
@@ -52,6 +57,7 @@ export const features = [
     Icon: MdOutlineNewReleases,
     darkColor: "#4BC6B9",
     lightColor: "#edf9f8",
-    moreInfoLink: "#",
+    moreInfoLink: "aktualizacje",
+    featureImage: "/images/features/update.png",
   },
 ];

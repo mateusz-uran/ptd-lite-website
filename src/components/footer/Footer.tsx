@@ -1,6 +1,8 @@
 import style from "./footer.module.scss";
 import { FaGithub } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import scrollToSection from "../../functions/scrollToSection";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -13,7 +15,7 @@ const Footer = () => {
             <img src={"/images/logo_ptd3.png"} alt="PTD Logo" />
           </span>
           <span className={style.rights}>
-            &#169; {year} All rights reserved.
+            &#169; {year} Wszelkie prawa zastrzeżone.
           </span>
           <span className={style.socials}>
             <a href="https://github.com/mateusz-uran" target="_blank">
@@ -28,9 +30,24 @@ const Footer = () => {
           <div className={style.column}>
             <h5>Nawigacja</h5>
             <ul>
-              <li>Strona główna</li>
-              <li>Funkcje</li>
-              <li>Jak to działa</li>
+              <li>
+                <Link to={"/"} onClick={() => scrollToSection("hero")}>
+                  Strona główna
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/features"}
+                  onClick={() => scrollToSection("features")}
+                >
+                  Funkcje
+                </Link>
+              </li>
+              <li>
+                <Link to={"/"} onClick={() => scrollToSection("how-it-works")}>
+                  Jak to działa
+                </Link>
+              </li>
             </ul>
           </div>
           <div className={style.column}>

@@ -18,6 +18,16 @@
       padding: 3rem 0;
     }
 
+    .featureParagraph {
+      color: $font-dark-gray;
+      max-width: 95%;
+      font-size: $font-micro;
+
+      p {
+        margin: 0.8rem 0;
+      }
+    }
+
     .h2,
     .cardsWrapper {
       @include mixin.contentWrapper();
@@ -36,6 +46,7 @@
         -webkit-box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
         -moz-box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
         box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
+        position: relative;
 
         .iconWrapper {
           border-radius: 50%;
@@ -48,6 +59,10 @@
           }
         }
 
+        .featureImage {
+          height: 350px;
+        }
+
         .h4 {
           text-align: center;
           max-width: 80%;
@@ -57,7 +72,8 @@
 
         .p {
           text-align: center;
-          color: $font-gray;
+          color: $font-dark-gray;
+          color: #000;
           margin-top: 1rem;
         }
 
@@ -83,6 +99,16 @@
     justify-content: center;
 
     .wrapper {
+      .featureParagraph {
+        max-width: 75%;
+        font-size: $font-small;
+        text-align: center;
+
+        p {
+          margin: 0.8rem 0;
+        }
+      }
+
       .cardsWrapper {
         display: flex;
         flex-wrap: wrap;

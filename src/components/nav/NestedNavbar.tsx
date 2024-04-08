@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./nestedNavbar.module.scss";
+import { Link } from "react-router-dom";
 
 type FuncArray = {
   subtitle: string;
@@ -59,31 +60,33 @@ const NestedNavbar = ({
             exit="closed"
             variants={variants}
           >
-            {list.map((element, idx) => (
-              <motion.li
-                key={element.subtitle}
-                className={style.li}
-                initial={{
-                  scale: 0,
-                  opacity: 0,
-                }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 150,
-                  damping: 20,
-                  delay: 0.01 + idx / 10,
-                }}
-              >
-                <a
-                  href={element.href}
-                  onClick={toggleBothNavbars}
-                  className={style.link}
+            {list.map((element, idx) => {
+              return (
+                <motion.li
+                  key={element.subtitle}
+                  className={style.li}
+                  initial={{
+                    scale: 0,
+                    opacity: 0,
+                  }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 150,
+                    damping: 20,
+                    delay: 0.01 + idx / 10,
+                  }}
                 >
-                  {element.subtitle}
-                </a>
-              </motion.li>
-            ))}
+                  <Link
+                    to={`/features/${element.href}`}
+                    onClick={toggleBothNavbars}
+                    className={style.link}
+                  >
+                    {element.subtitle}
+                  </Link>
+                </motion.li>
+              );
+            })}
           </motion.ul>
         )}
       </AnimatePresence>

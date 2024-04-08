@@ -13,7 +13,7 @@ const Features = () => {
           transition={{ duration: 1.3, type: "spring" }}
           className={style.h2}
         >
-          Dostępne funkcje{" "}
+          Dostępne funkcje
         </motion.h2>
         <div className={style.cardsWrapper}>
           {features.map((feat, idx) => {

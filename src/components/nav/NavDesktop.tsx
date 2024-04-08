@@ -4,6 +4,7 @@ import NestedNavbar from "./NestedNavbar";
 import { motion } from "framer-motion";
 import style from "./navDesktop.module.scss";
 import PrimaryButton from "../buttons/PrimaryButton";
+import { Link } from "react-router-dom";
 
 type NavDesktopProps = {
   isOpen: boolean;
@@ -31,15 +32,14 @@ const NavDesktop = ({
               return (
                 <motion.li key={route.title} className={style.outerLiLink}>
                   <div className={style.linkWrapper}>
-                    <motion.a
-                      href={href}
+                    <motion.span
                       className={style.link}
                       initial={{ backgroundColor: "#30373a" }}
                       whileHover={{ backgroundColor: "#222729" }}
                       transition={{ duration: 0.2 }}
                     >
-                      {title}
-                    </motion.a>
+                      <Link to={href}>{title}</Link>
+                    </motion.span>
                     {Icon && (
                       <motion.div
                         animate={{ rotate: isNestedOpen ? 180 : 0 }}

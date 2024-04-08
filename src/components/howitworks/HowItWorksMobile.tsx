@@ -1,6 +1,6 @@
 import style from "./howItWorks.module.scss";
 import { useState } from "react";
-import { steps } from "../../content/howItWorksContent";
+import { smallSteps } from "../../content/howItWorksContent";
 import { motion } from "framer-motion";
 
 const HowItWorksMobile = () => {
@@ -9,7 +9,7 @@ const HowItWorksMobile = () => {
   return (
     <div className={style.mobileWrapper}>
       <div className={style.iconsRow}>
-        {steps.map((step, index) => (
+        {smallSteps.map((step, index) => (
           <step.Icon
             key={index}
             className={`${style.icon} ${
@@ -20,7 +20,7 @@ const HowItWorksMobile = () => {
         ))}
       </div>
       <div className={style.dotsRow}>
-        {steps.map((_, index) => (
+        {smallSteps.map((_, index) => (
           <span
             key={index}
             className={`${style.dot} ${
@@ -30,24 +30,27 @@ const HowItWorksMobile = () => {
           ></span>
         ))}
       </div>
-      <div key={steps[selectedIcon].explanation} className={style.explanation}>
+      <div
+        key={smallSteps[selectedIcon].explanation}
+        className={style.explanation}
+      >
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           className={style.p}
         >
-          {steps[selectedIcon].explanation}
+          {smallSteps[selectedIcon].explanation}
         </motion.p>
       </div>
       <div className={style.laptop}>
         <motion.img
-          key={steps[selectedIcon].image}
+          key={smallSteps[selectedIcon].image}
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           alt="ptd lite step"
-          src={steps[selectedIcon].image}
+          src={smallSteps[selectedIcon].image}
         />
       </div>
     </div>
