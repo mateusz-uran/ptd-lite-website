@@ -22,3 +22,15 @@ body {
     margin-left: 0.5rem;
   }
 }
+
+.secondary-btn {
+  font-size: $font-micro;
+  margin: 0.8rem 0;
+  padding: 0.5rem 0.5rem;
+  border-radius: 25px;
+  background-color: $primary-color-gray;
+  color: $font-dark-gray;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid #d5d9d9;
+}

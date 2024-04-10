@@ -65,6 +65,8 @@ export const features = [
 export const featureSpecification = [
   {
     id: "ladunek",
+    baner:
+      "/images/features/cargo/concept-communication-with-pins-map_smaller.jpg",
     header: "Punkty trasy / ładunki",
     text: [
       "Kierowca odbierając i dostarczając dany towar tworzy punkty trasy, są to odcinki ZAŁADUNEK - ROZŁADUNEK, aplikacja posiada funkcję grupowania punktów gdzie ładunek jest ten sam.",
@@ -89,25 +91,25 @@ export const featureSpecification = [
           "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
       },
     ],
-    videoLink: "/images/features/cargo/PTD Lite - Cargo.mp4",
+    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
     subtext: [
       "Na filmie poglądowym widać, że dodaną grupę / ładunek można dowolnie edytować tzn. zmieniać nazwę czy tonaż.",
       "Pozostawia to użytkownikowi pełną autonomię jak ma to finalnie wyglądać na karcie drogowej.",
     ],
   },
-  {
-    id: "faktura",
-  },
-  {
-    id: "cmr",
-  },
-  {
-    id: "statystyki",
-  },
-  {
-    id: "archiwum",
-  },
-  {
-    id: "aktualizacje",
-  },
+  // {
+  //   id: "faktura",
+  // },
+  // {
+  //   id: "cmr",
+  // },
+  // {
+  //   id: "statystyki",
+  // },
+  // {
+  //   id: "archiwum",
+  // },
+  // {
+  //   id: "aktualizacje",
+  // },
 ];
