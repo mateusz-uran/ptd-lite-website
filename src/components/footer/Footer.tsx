@@ -2,7 +2,6 @@ import style from "./footer.module.scss";
 import { FaGithub } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import scrollToSection from "../../functions/scrollToSection";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -31,22 +30,13 @@ const Footer = () => {
             <h5>Nawigacja</h5>
             <ul>
               <li>
-                <Link to={"/"} onClick={() => scrollToSection("hero")}>
-                  Strona główna
-                </Link>
+                <Link to={"/"}>Strona główna</Link>
               </li>
               <li>
-                <Link
-                  to={"/features"}
-                  onClick={() => scrollToSection("features")}
-                >
-                  Funkcje
-                </Link>
+                <Link to={"/funkcje"}>Funkcje</Link>
               </li>
               <li>
-                <Link to={"/"} onClick={() => scrollToSection("how-it-works")}>
-                  Jak to działa
-                </Link>
+                <Link to={"/"}>Jak to działa</Link>
               </li>
             </ul>
           </div>

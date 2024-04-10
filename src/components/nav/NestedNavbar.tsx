@@ -78,7 +78,7 @@ const NestedNavbar = ({
                   }}
                 >
                   <Link
-                    to={`/features/${element.href}`}
+                    to={`/funkcje/${element.href}`}
                     onClick={toggleBothNavbars}
                     className={style.link}
                   >

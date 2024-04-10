@@ -19,6 +19,11 @@ const NavDesktop = ({
   isNestedOpen,
   toggleNestedNavbar,
 }: NavDesktopProps) => {
+  //TODO: handle login to ptd app logic
+  function loginFunction() {
+    console.log("login");
+  }
+
   return (
     <nav className={style.nav}>
       <div className={style.wrapper}>
@@ -78,7 +83,7 @@ const NavDesktop = ({
                 damping: 16,
               }}
             >
-              <PrimaryButton text={"Login"} />
+              <PrimaryButton text={"Login"} onClickFunction={loginFunction} />
             </motion.div>
           </ul>
         </div>

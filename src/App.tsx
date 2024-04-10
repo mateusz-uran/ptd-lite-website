@@ -3,8 +3,8 @@ import Layout from "./Layout";
 import Features from "./components/features/Features";
 import Hero from "./components/hero/Hero";
 import HowItWorks from "./components/howitworks/HowItWorks";
-import FeaturePage from "./components/features/FeaturePage";
-import AvailableFeatures from "./components/features/AvailableFeatures";
+import FeatureSpecification from "./components/features/FeatureSpecification";
+import FeaturesPage from "./components/features/FeaturesPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,18 +19,18 @@ function App() {
       ),
     },
     {
-      path: "/features",
+      path: "/funkcje",
       element: (
         <Layout>
-          <AvailableFeatures />
+          <FeaturesPage />
         </Layout>
       ),
     },
     {
-      path: "/features/:featureName",
+      path: "/funkcje/:featureName",
       element: (
         <Layout>
-          <FeaturePage />
+          <FeatureSpecification />
         </Layout>
       ),
     },

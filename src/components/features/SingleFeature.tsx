@@ -64,7 +64,7 @@ const SingleFeature = ({
         }}
         className={style.button}
       >
-        <Link to={moreInfoLink}>Czytaj więcej</Link>
+        <Link to={`/funkcje/${moreInfoLink}`}>Czytaj więcej</Link>
       </motion.button>
     </motion.div>
   );

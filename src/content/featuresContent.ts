@@ -61,3 +61,53 @@ export const features = [
     featureImage: "/images/features/update.png",
   },
 ];
+
+export const featureSpecification = [
+  {
+    id: "ladunek",
+    header: "Punkty trasy / ładunki",
+    text: [
+      "Kierowca odbierając i dostarczając dany towar tworzy punkty trasy, są to odcinki ZAŁADUNEK - ROZŁADUNEK, aplikacja posiada funkcję grupowania punktów gdzie ładunek jest ten sam.",
+
+      "Przykładowo rozwożąc truskawki do kilku miejsc można utworzyć grupę z nazwą towaru (truskawki), dodatkowo można dodać tonaż i temperature.",
+
+      "Te dane są opcjonalne, podobnie jak notatki kierowcy do danego ładunku.",
+    ],
+    imageLinks: [
+      {
+        link: "/images/features/cargo/add_cargo.png",
+        caption: "Użytkownik musi wybrać trasy bez utworzonego ładunku.",
+      },
+      {
+        link: "/images/features/cargo/add_cargo_form.png",
+        caption:
+          "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
+      },
+      {
+        link: "/images/features/cargo/add_cargo_ready.png",
+        caption:
+          "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
+      },
+    ],
+    videoLink: "/images/features/cargo/PTD Lite - Cargo.mp4",
+    subtext: [
+      "Na filmie poglądowym widać, że dodaną grupę / ładunek można dowolnie edytować tzn. zmieniać nazwę czy tonaż.",
+      "Pozostawia to użytkownikowi pełną autonomię jak ma to finalnie wyglądać na karcie drogowej.",
+    ],
+  },
+  {
+    id: "faktura",
+  },
+  {
+    id: "cmr",
+  },
+  {
+    id: "statystyki",
+  },
+  {
+    id: "archiwum",
+  },
+  {
+    id: "aktualizacje",
+  },
+];

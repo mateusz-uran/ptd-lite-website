@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 
 type PrimaryButtonProps = {
   text: string;
+  onClickFunction: () => void;
 };
 
-const PrimaryButton = ({ text }: PrimaryButtonProps) => {
+const PrimaryButton = ({ text, onClickFunction }: PrimaryButtonProps) => {
   return (
     <motion.button
+      onClick={onClickFunction}
       whileHover={{
         boxShadow: "rgba(61, 127, 58, 0.5) 0px 2px 6px",
       }}

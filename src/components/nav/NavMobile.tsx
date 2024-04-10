@@ -32,6 +32,11 @@ const NavbMobile = ({
     toggleBothNavbars(false, false);
   });
 
+  //TODO: handle login to ptd app logic
+  function loginFunction() {
+    console.log("login");
+  }
+
   return (
     <nav ref={refList} className={style.nav}>
       <img src={logo} alt="PTD logo" />
@@ -98,7 +103,7 @@ const NavbMobile = ({
                 );
               })}
               <div className={style.buttonWrapper}>
-                <PrimaryButton text={"Login"} />
+                <PrimaryButton text={"Login"} onClickFunction={loginFunction} />
               </div>
             </ul>
           </motion.div>

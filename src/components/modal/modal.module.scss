@@ -1,0 +1,24 @@
+@use "../../styles/mixin.scss" as mixin;
+@import "../../styles/variables.scss";
+
+.modalWrapper {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(107, 114, 128, 0.5);
+
+  .modal {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    overflow: hidden;
+
+    .body {
+    }
+
+    .footer {
+    }
+  }
+}
