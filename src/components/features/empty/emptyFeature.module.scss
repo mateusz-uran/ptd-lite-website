@@ -5,11 +5,10 @@
   min-height: 80vh;
   display: flex;
   align-items: center;
-
-  @include mixin.wrapper();
+  justify-content: center;
 
   .wrapper {
-    @include mixin.contentWrapper();
+    @include mixin.wrapper();
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +22,22 @@
 
     span {
       padding: 1rem;
+      font-size: $font-medium;
+    }
+  }
+}
+
+@include mixin.tablet() {
+  .section {
+    min-height: 50vh;
+
+    .wrapper {
+      h3 {
+        max-width: 80%;
+      }
+      img {
+        max-height: 550px;
+      }
     }
   }
 }
