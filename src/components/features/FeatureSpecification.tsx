@@ -13,14 +13,14 @@ const FeatureSpecification = () => {
         if (feature.id === featureName) {
           return (
             <section key={feature.id} className={style.section}>
+              <img
+                className={style.points}
+                src="/images/features/cargo/concept-communication-with-pins-map_smaller.jpg"
+                alt="points"
+              />
               <div className={style.wrapper}>
                 <div className={style.content}>
                   <div className={style.textWrapper}>
-                    <img
-                      className={style.points}
-                      src="/images/features/cargo/concept-communication-with-pins-map.jpg"
-                      alt="points"
-                    />
                     <AnimationWrapper variantType="text" listIndex={1}>
                       <h3>{feature.header}</h3>
                     </AnimationWrapper>
@@ -49,12 +49,14 @@ const FeatureSpecification = () => {
                           Film poglądowy przedstawiający krok po kroku jak
                           funkcja działa.
                         </p>
-                        <ReactPlayer
-                          className={style.reactPlayer}
-                          width="100%"
-                          height="100%"
-                          url="https://www.youtube.com/watch?v=SlO58lWobYM"
-                        />
+                        <div className={style.playerWrapper}>
+                          <ReactPlayer
+                            className={style.reactPlayer}
+                            width="100%"
+                            height="100%"
+                            url="https://www.youtube.com/watch?v=SlO58lWobYM"
+                          />
+                        </div>
                       </>
                     </AnimationWrapper>
                   </div>

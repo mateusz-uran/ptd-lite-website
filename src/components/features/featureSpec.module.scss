@@ -2,6 +2,13 @@
 @import "../../styles/variables.scss";
 
 .section {
+  .points {
+    max-height: 120px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+
   .wrapper {
     @include mixin.wrapper();
 
@@ -16,21 +23,8 @@
         display: flex;
         flex-direction: column;
 
-        .points {
-          min-height: 150px;
-          object-fit: cover;
-          position: absolute;
-          width: 100%;
-          left: 0;
-          right: 0;
-          top: 0;
-          z-index: -1;
-          opacity: 0.7;
-        }
-
         h3 {
           text-align: center;
-          margin-top: 150px;
           margin-bottom: 1.5rem;
           color: #30373a;
           font-size: $font-medium;
@@ -84,12 +78,8 @@
       }
 
       .videoWrapper {
-        padding: 0.6rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 15px;
         width: 100%;
 
         p {
@@ -102,6 +92,17 @@
           border-top-right-radius: 15px;
           border: 1px solid rgba(0, 0, 0, 0.1);
           border-bottom: 0;
+        }
+
+        .playerWrapper {
+          position: relative;
+          padding-top: 56.25%;
+
+          .reactPlayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
         }
       }
 
@@ -118,6 +119,63 @@
           font-weight: 600;
           font-style: italic;
           line-height: 1.8;
+        }
+      }
+    }
+  }
+}
+
+@include mixin.tablet() {
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .points {
+      max-height: 180px;
+      object-fit: cover;
+      opacity: 0.9;
+    }
+
+    .wrapper {
+      .content {
+        .textWrapper {
+          align-items: center;
+          margin: 2rem 0;
+          h3 {
+            font-size: $font-big;
+          }
+
+          .paragraphs {
+            font-size: $font-small;
+            width: 60%;
+            padding: 1.5rem;
+          }
+        }
+
+        .imgWrapper {
+          figcaption {
+            max-width: 600px;
+            font-size: $font-small;
+          }
+        }
+
+        .videoWrapper {
+          width: auto;
+
+          p {
+            min-width: 600px;
+            padding: 0.8rem;
+            font-size: $font-micro;
+          }
+        }
+
+        .subTextWrapper {
+          width: 55%;
+
+          .subText {
+            font-size: $font-small;
+          }
         }
       }
     }
