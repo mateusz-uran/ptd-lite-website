@@ -30,7 +30,7 @@ export const routes = [
   },
   {
     title: "Jak to działa",
-    href: "/",
+    href: "/instrukcje",
   },
   {
     title: "Kontakt",

@@ -53,23 +53,11 @@ const SingleFeature = ({
       </div>
       <h4 className={style.h4}>{header}</h4>
       <p className={style.p}>{text}</p>
-      <SecondaryButton task={null}>
-        <Link to={`/funkcje/${moreInfoLink}`}>Czytaj więcej</Link>
-      </SecondaryButton>
-      {/* <motion.button
-        whileHover={{
-          boxShadow: "rgba(48, 55, 58, 0.5) 0px 2px 4px",
-        }}
-        whileTap={{ scale: 1.03 }}
-        transition={{
-          type: "spring",
-          stiffness: 400,
-          damping: 10,
-        }}
-        className={style.button}
-      >
-        <Link to={`/funkcje/${moreInfoLink}`}>Czytaj więcej</Link>
-      </motion.button> */}
+      <div className={style.btnWrapper}>
+        <SecondaryButton task={null}>
+          <Link to={`/funkcje/${moreInfoLink}`}>Czytaj więcej</Link>
+        </SecondaryButton>
+      </div>
     </motion.div>
   );
 };

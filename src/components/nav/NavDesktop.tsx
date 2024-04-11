@@ -27,7 +27,7 @@ const NavDesktop = ({
   return (
     <nav className={style.nav}>
       <div className={style.wrapper}>
-        <a href="">
+        <a href="/">
           <img src={logo} alt="PTD logo" />
         </a>
         <div className={style.listWrapper}>
