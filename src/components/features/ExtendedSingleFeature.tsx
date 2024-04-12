@@ -2,6 +2,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import style from "./features.module.scss";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { SecondaryButton } from "../buttons/SecondaryButton";
 
 type ExtendedSingleFeatureProps = {
   index: number;
@@ -45,19 +46,9 @@ const ExtendedSingleFeature = ({
       </div>
       <h4 className={style.h4}>{header}</h4>
       <p className={style.p}>{text}</p>
-      <motion.button
-        whileHover={{
-          boxShadow: "rgba(48, 55, 58, 0.5) 0px 2px 4px",
-        }}
-        whileTap={{ scale: 1.03 }}
-        transition={{
-          stiffness: 400,
-          damping: 10,
-        }}
-        className={style.button}
-      >
+      <SecondaryButton task={null}>
         <Link to={moreInfoLink}>Czytaj więcej</Link>
-      </motion.button>
+      </SecondaryButton>
     </motion.div>
   );
 };

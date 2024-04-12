@@ -2,242 +2,425 @@
 @import "../../styles/variables.scss";
 
 .section {
-  display: flex;
-  justify-content: center;
-  min-height: 80vh;
-  align-items: center;
-
   .wrapper {
     @include mixin.wrapper();
     display: flex;
-    height: 100%;
     flex-direction: column;
+    align-items: center;
+    align-self: center;
 
-    .h2 {
-      @include mixin.contentWrapper();
+    .headWrapper {
+      overflow: hidden;
+      width: 90%;
       text-align: center;
-      color: $font-dark-gray;
       padding: 3rem 0;
+
+      h2 {
+        font-size: $font-big;
+        color: $font-dark-gray;
+        margin-top: 1rem;
+      }
+
+      p {
+        font-size: $font-small;
+        color: $font-gray;
+      }
     }
 
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .contentWrapper {
+      @include mixin.contentWrapper();
 
-      .desktopWrapper {
-        @include mixin.contentWrapper();
-      }
+      .singleStep {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
 
-      .mobileWrapper {
-        max-width: 550px;
-        position: relative;
-
-        .iconsRow,
-        .dotsRow {
-          display: grid;
-          grid-template-columns: auto auto auto auto auto;
-          width: 100%;
-          justify-items: center;
+        .number {
+          display: flex;
+          justify-content: center;
           align-items: center;
+          width: 35px;
+          height: 35px;
+          padding: 1rem;
+          border-radius: 50%;
+          margin: 0 1rem;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+          font-size: $font-small;
+          color: $primary-color-green;
+          font-weight: 600;
         }
 
-        .iconsRow {
-          margin: 1.5rem 0;
-          .icon {
-            font-size: $font-big;
+        .textWrapper {
+          h4 {
+            margin-bottom: 0.5rem;
+            font-size: $font-small;
+            color: $font-dark-gray;
+          }
+
+          p {
+            font-size: $font-micro;
             color: $font-gray;
           }
-          .icon.selected {
-            color: $primary-color-green;
-            transition: color 0.3s ease;
-          }
         }
+      }
+    }
 
-        .dotsRow {
-          position: relative;
-          .dot {
-            background: $font-gray;
-            width: 11px;
-            height: 11px;
-            border-radius: 50%;
+    .imgWrapper {
+      background-image: linear-gradient(
+        45deg,
+        hsl(117deg 37% 36%) 0%,
+        hsl(115deg 29% 43%) 11%,
+        hsl(113deg 22% 49%) 22%,
+        hsl(112deg 21% 55%) 33%,
+        hsl(111deg 21% 62%) 44%,
+        hsl(111deg 21% 69%) 56%,
+        hsl(110deg 20% 75%) 67%,
+        hsl(110deg 19% 82%) 78%,
+        hsl(109deg 16% 89%) 89%,
+        hsl(0deg 0% 96%) 100%
+      );
+      border-radius: 5px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-            &::before {
-              position: absolute;
-              content: "";
-              width: 100%;
-              border-bottom: 1px solid $font-gray;
-              left: 0;
-              bottom: 50%;
-              z-index: -1;
-            }
-          }
-          .dot.selected {
-            background-color: $primary-color-green;
-            transition: background-color 0.3s ease;
-          }
-        }
-        .explanation {
-          text-align: center;
-          padding: 1rem;
-          font-size: $font-small;
-          font-weight: 600;
-          color: $font-gray;
-          margin: 1rem 0;
+      img {
+        margin: 1.5rem 0;
+        border-radius: 15px;
+      }
+    }
 
-          .p {
-            min-height: 50px;
-          }
-        }
+    .btnWrapper {
+      overflow: hidden;
+    }
+  }
+}
 
-        .laptop {
-          display: flex;
-          justify-content: center;
-          min-height: 325px;
-          align-items: center;
+@include mixin.tablet() {
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper {
+      @include mixin.wrapper();
+
+      .headWrapper {
+        p {
+          font-size: $font-medium;
         }
       }
 
-      .desktopWrapper {
-        display: none;
-      }
+      .contentWrapper {
+        @include mixin.contentWrapper();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-      @include mixin.desktop() {
-        .mobileWrapper {
-          display: none;
-        }
-
-        .desktopWrapper {
+        .steps {
           display: flex;
-          flex-direction: row;
-          justify-content: center;
+          flex-direction: column;
           align-items: center;
+          .singleStep {
+            margin-bottom: 0;
+            margin: 2rem;
+            width: 545px;
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+            padding: 1rem;
 
-          .stepsWrapper {
-            width: 40%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            .singleStep {
-              display: grid;
-              grid-template-columns: auto auto auto;
-              align-items: center;
-              justify-content: flex-start;
-
-              .icon {
+            .textWrapper {
+              h4 {
                 font-size: $font-medium;
-                min-width: 50px;
-                cursor: pointer;
-                transition: all 0.3s ease;
               }
 
-              .icon.selected {
-                color: $primary-color-green;
-                font-size: $font-big;
-              }
-
-              .dotWrapper {
-                min-width: 50px;
-                display: flex;
-                justify-content: center;
-                position: relative;
-                height: 100%;
-                align-items: center;
-
-                &::after {
-                  content: "";
-                  position: absolute;
-                  height: 100%;
-                  width: 1px;
-                  background: $font-gray;
-                  left: 50%;
-                  z-index: -1;
-                }
-
-                .dot {
-                  width: 10px;
-                  height: 10px;
-                  border-radius: 50%;
-                  background: $font-gray;
-                  cursor: pointer;
-                  transition: all 0.3s ease;
-                }
-
-                .dot.selected {
-                  background: $primary-color-green;
-                  width: 12px;
-                  height: 12px;
-                }
-              }
-
-              .p {
-                padding: 1rem;
-                font-size: $font-small;
-                cursor: pointer;
-                font-weight: 600;
-              }
-
-              .p.selected {
-                color: $primary-color-green;
-              }
-            }
-          }
-
-          .laptop {
-            display: flex;
-            align-items: center;
-            width: 60%;
-            min-width: 35rem;
-            height: 100%;
-          }
-        }
-      }
-
-      .ending {
-        width: 100%;
-        padding: 0 1rem;
-
-        .h4 {
-          color: $font-dark-gray;
-          font-size: $font-small;
-          margin: 1rem 0;
-        }
-
-        .listsWrapper {
-          display: flex;
-
-          .ul {
-            @include mixin.list-default();
-            list-style-type: "❯";
-            columns: 1;
-            -webkit-columns: 1;
-            -moz-columns: 1;
-
-            .li {
-              font-size: $font-micro;
-              padding: 0.5rem;
-              margin-left: 0.5rem;
-              font-weight: 600;
-              max-width: 80%;
-
-              &::marker {
-                color: $primary-color-green;
+              p {
                 font-size: $font-small;
               }
             }
           }
+        }
 
-          @include mixin.tablet() {
-            .ul {
-              columns: 2;
-              -webkit-columns: 2;
-              -moz-columns: 2;
-            }
-          }
+        .imgWrapper {
+          margin: 2rem 0;
+          width: 520px;
+          min-height: 45vh;
+          justify-content: space-between;
         }
       }
     }
   }
 }
+
+@include mixin.desktop() {
+  .section {
+    .wrapper {
+      .contentWrapper {
+        flex-direction: row;
+        align-items: normal;
+        justify-content: space-between;
+        width: 100%;
+
+        .steps {
+          width: 45%;
+          margin-right: 1rem;
+          .singleStep {
+            width: 90%;
+            border-radius: 5px;
+          }
+        }
+
+        .imgWrapper {
+          width: 45%;
+          margin: 0;
+        }
+      }
+
+      .btnWrapper {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+}
+
+// .section {
+//   display: flex;
+//   justify-content: center;
+//   min-height: 80vh;
+//   align-items: center;
+
+//   .wrapper {
+//     @include mixin.wrapper();
+//     display: flex;
+//     height: 100%;
+//     flex-direction: column;
+
+//     .h2 {
+//       @include mixin.contentWrapper();
+//       text-align: center;
+//       color: $font-dark-gray;
+//       padding: 3rem 0;
+//     }
+
+//     .content {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+
+//       .desktopWrapper {
+//         @include mixin.contentWrapper();
+//       }
+
+//       .mobileWrapper {
+//         max-width: 550px;
+//         position: relative;
+
+//         .iconsRow,
+//         .dotsRow {
+//           display: grid;
+//           grid-template-columns: auto auto auto auto auto;
+//           width: 100%;
+//           justify-items: center;
+//           align-items: center;
+//         }
+
+//         .iconsRow {
+//           margin: 1.5rem 0;
+//           .icon {
+//             font-size: $font-big;
+//             color: $font-gray;
+//           }
+//           .icon.selected {
+//             color: $primary-color-green;
+//             transition: color 0.3s ease;
+//           }
+//         }
+
+//         .dotsRow {
+//           position: relative;
+//           .dot {
+//             background: $font-gray;
+//             width: 11px;
+//             height: 11px;
+//             border-radius: 50%;
+
+//             &::before {
+//               position: absolute;
+//               content: "";
+//               width: 100%;
+//               border-bottom: 1px solid $font-gray;
+//               left: 0;
+//               bottom: 50%;
+//               z-index: -1;
+//             }
+//           }
+//           .dot.selected {
+//             background-color: $primary-color-green;
+//             transition: background-color 0.3s ease;
+//           }
+//         }
+//         .explanation {
+//           text-align: center;
+//           padding: 1rem;
+//           font-size: $font-small;
+//           font-weight: 600;
+//           color: $font-gray;
+//           margin: 1rem 0;
+
+//           .p {
+//             min-height: 50px;
+//           }
+//         }
+
+//         .laptop {
+//           display: flex;
+//           justify-content: center;
+//           min-height: 325px;
+//           align-items: center;
+//         }
+//       }
+
+//       .desktopWrapper {
+//         display: none;
+//       }
+
+//       @include mixin.desktop() {
+//         .mobileWrapper {
+//           display: none;
+//         }
+
+//         .desktopWrapper {
+//           display: flex;
+//           flex-direction: row;
+//           justify-content: center;
+//           align-items: center;
+
+//           .stepsWrapper {
+//             width: 40%;
+//             height: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+
+//             .singleStep {
+//               display: grid;
+//               grid-template-columns: auto auto auto;
+//               align-items: center;
+//               justify-content: flex-start;
+
+//               .icon {
+//                 font-size: $font-medium;
+//                 min-width: 50px;
+//                 cursor: pointer;
+//                 transition: all 0.3s ease;
+//               }
+
+//               .icon.selected {
+//                 color: $primary-color-green;
+//                 font-size: $font-big;
+//               }
+
+//               .dotWrapper {
+//                 min-width: 50px;
+//                 display: flex;
+//                 justify-content: center;
+//                 position: relative;
+//                 height: 100%;
+//                 align-items: center;
+
+//                 &::after {
+//                   content: "";
+//                   position: absolute;
+//                   height: 100%;
+//                   width: 1px;
+//                   background: $font-gray;
+//                   left: 50%;
+//                   z-index: -1;
+//                 }
+
+//                 .dot {
+//                   width: 10px;
+//                   height: 10px;
+//                   border-radius: 50%;
+//                   background: $font-gray;
+//                   cursor: pointer;
+//                   transition: all 0.3s ease;
+//                 }
+
+//                 .dot.selected {
+//                   background: $primary-color-green;
+//                   width: 12px;
+//                   height: 12px;
+//                 }
+//               }
+
+//               .p {
+//                 padding: 1rem;
+//                 font-size: $font-small;
+//                 cursor: pointer;
+//                 font-weight: 600;
+//               }
+
+//               .p.selected {
+//                 color: $primary-color-green;
+//               }
+//             }
+//           }
+
+//           .laptop {
+//             display: flex;
+//             align-items: center;
+//             width: 60%;
+//             min-width: 35rem;
+//             height: 100%;
+//           }
+//         }
+//       }
+
+//       .ending {
+//         width: 100%;
+//         padding: 0 1rem;
+
+//         .h4 {
+//           color: $font-dark-gray;
+//           font-size: $font-small;
+//           margin: 1rem 0;
+//         }
+
+//         .listsWrapper {
+//           display: flex;
+
+//           .ul {
+//             @include mixin.list-default();
+//             list-style-type: "❯";
+//             columns: 1;
+//             -webkit-columns: 1;
+//             -moz-columns: 1;
+
+//             .li {
+//               font-size: $font-micro;
+//               padding: 0.5rem;
+//               margin-left: 0.5rem;
+//               font-weight: 600;
+//               max-width: 80%;
+
+//               &::marker {
+//                 color: $primary-color-green;
+//                 font-size: $font-small;
+//               }
+//             }
+//           }
+
+//           @include mixin.tablet() {
+//             .ul {
+//               columns: 2;
+//               -webkit-columns: 2;
+//               -moz-columns: 2;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

@@ -2,7 +2,7 @@ import style from "./featureSpec.module.scss";
 import { featureSpecification } from "../../content/featuresContent";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
-import { AnimationWrapper } from "./AnimationWrapper";
+import { AnimationWrapper } from "../animations/AnimationWrapper";
 import EmptyFeature from "./empty/EmptyFeature";
 
 const FeatureSpecification = () => {

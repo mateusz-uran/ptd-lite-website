@@ -1,20 +1,18 @@
 import { features } from "../../content/featuresContent";
+import { AnimationWrapper } from "../animations/AnimationWrapper";
 import SingleFeature from "./SingleFeature";
 import style from "./features.module.scss";
-import { motion } from "framer-motion";
 
 const Features = () => {
   return (
     <section className={style.section}>
       <div className={style.wrapper}>
-        <motion.h2
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, type: "spring" }}
-          className={style.h2}
-        >
-          Dostępne funkcje
-        </motion.h2>
+        <AnimationWrapper variantType="text" listIndex={0}>
+          <div className={style.textWrapper}>
+            <h2 className={style.h2}>Dostępne funkcje</h2>
+            <p>Główne zadania aplikacji</p>
+          </div>
+        </AnimationWrapper>
         <div className={style.cardsWrapper}>
           {features.map((feat, idx) => {
             const { header, text, Icon, darkColor, lightColor, moreInfoLink } =

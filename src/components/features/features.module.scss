@@ -12,37 +12,36 @@
     flex-direction: column;
     align-items: center;
 
-    .h2 {
+    .textWrapper {
       text-align: center;
-      color: $font-dark-gray;
       padding: 3rem 0;
-    }
 
-    .featureParagraph {
-      color: $font-dark-gray;
-      max-width: 95%;
-      font-size: $font-micro;
+      h2 {
+        font-size: $font-big;
+        color: $font-dark-gray;
+      }
 
       p {
-        margin: 0.8rem 0;
+        font-size: $font-small;
+        color: $font-gray;
       }
     }
 
-    .h2,
+    .textWrapper,
     .cardsWrapper {
       @include mixin.contentWrapper();
     }
 
     .cardsWrapper {
       .card {
-        background: #fff;
-        margin-bottom: 0.8rem;
-        border-radius: 5px;
-        padding: 1.2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0.8rem;
+        padding: 1.2rem;
         max-width: 400px;
+        border-radius: 5px;
+        background: #fff;
         -webkit-box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
         -moz-box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
         box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
@@ -68,13 +67,14 @@
           max-width: 80%;
           margin-top: 1rem;
           color: $font-dark-gray;
+          font-size: $font-medium;
         }
 
         .p {
           text-align: center;
           color: $font-dark-gray;
-          color: #000;
           margin-top: 1rem;
+          font-size: $font-small;
         }
 
         .btnWrapper {
@@ -91,16 +91,11 @@
     justify-content: center;
 
     .wrapper {
-      .featureParagraph {
-        max-width: 75%;
-        font-size: $font-small;
-        text-align: center;
-
+      .textWrapper {
         p {
-          margin: 0.8rem 0;
+          font-size: $font-medium;
         }
       }
-
       .cardsWrapper {
         display: flex;
         flex-wrap: wrap;

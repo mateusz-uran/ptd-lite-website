@@ -4,6 +4,28 @@ import { BsFillFuelPumpDieselFill } from "react-icons/bs";
 import { FaFilePdf } from "react-icons/fa6";
 import { FaHourglassStart } from "react-icons/fa";
 
+export const howItWorkSteps = {
+  text: [
+    {
+      header: "Wpisz numer karty",
+      desc: "Numer identyfikuje każdą kartę tzn. musi być unikalny, może się składać z cyfr i liter.",
+    },
+    {
+      header: "Dodaj punkty trasy i tankowania",
+      desc: "Wpisz wszystkie przejechany punkty trasy w formularzu oraz wykonanie tankowania pojazdu, aplikacja podsumuje wszystkie dane.",
+    },
+    {
+      header: "Generuj plik PDF",
+      desc: "Karta drogowa w formie pliku PDF z wszystkimi informacjami, które dodałeś. Dodatkowo zawiera dane pojazdu czy dane z tachografu",
+    },
+  ],
+  images: [
+    "/images/howitworks/addcard_form.png",
+    "/images/howitworks/addcard_form.png",
+    "/images/howitworks/addcard_form.png",
+  ],
+};
+
 export const smallSteps = [
   {
     Icon: IoIosCreate,

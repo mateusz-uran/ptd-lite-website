@@ -6,6 +6,7 @@ import HowItWorks from "./components/howitworks/HowItWorks";
 import FeatureSpecification from "./components/features/FeatureSpecification";
 import FeaturesPage from "./components/features/FeaturesPage";
 import HowItWorksPage from "./components/howitworks/HowItWorksPage";
+import HowItWorksWrapper from "./components/howitworks/HowItWorksWrapper";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,7 +16,8 @@ function App() {
         <Layout>
           <Hero />
           <Features />
-          <HowItWorks />
+          {/* <HowItWorks /> */}
+          <HowItWorksWrapper />
         </Layout>
       ),
     },
