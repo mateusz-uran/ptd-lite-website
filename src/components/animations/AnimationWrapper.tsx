@@ -46,7 +46,7 @@ export const AnimationWrapper = ({
   }, [isInView]);
 
   return (
-    <div ref={ref} className="animation-wrapper">
+    <div ref={ref} className="animation-wrapper" style={{ overflow: "hidden" }}>
       <motion.div
         variants={selectedVariant}
         initial="hidden"

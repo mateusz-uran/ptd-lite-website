@@ -12,6 +12,25 @@
     flex-direction: column;
     align-items: center;
 
+    .headerWrapper {
+      text-align: center;
+      max-width: 650px;
+
+      h2 {
+        font-size: $font-big;
+        color: $font-dark-gray;
+      }
+
+      .featureParagraph {
+        font-size: $font-small;
+        color: $font-gray;
+
+        p {
+          margin: 1.5rem 0;
+        }
+      }
+    }
+
     .textWrapper {
       text-align: center;
       padding: 3rem 0;
@@ -27,6 +46,7 @@
       }
     }
 
+    .headerWrapper,
     .textWrapper,
     .cardsWrapper {
       @include mixin.contentWrapper();
@@ -91,6 +111,15 @@
     justify-content: center;
 
     .wrapper {
+      .headerWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .featureParagraph {
+          width: 80%;
+        }
+      }
+
       .textWrapper {
         p {
           font-size: $font-medium;

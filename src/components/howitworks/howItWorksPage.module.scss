@@ -1,0 +1,206 @@
+@use "../../styles/mixin.scss" as mixin;
+@import "../../styles/variables.scss";
+
+.section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    @include mixin.wrapper();
+
+    height: 100%;
+    width: 100%;
+    .content {
+      height: 100%;
+      width: 100%;
+
+      .cardWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+          rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+        border-radius: 5px;
+        margin: 2rem 0 4rem 0;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background-image: linear-gradient(
+            45deg,
+            hsl(117deg 37% 36%) 0%,
+            hsl(115deg 29% 43%) 11%,
+            hsl(113deg 22% 49%) 22%,
+            hsl(112deg 21% 55%) 33%,
+            hsl(111deg 21% 62%) 44%,
+            hsl(111deg 21% 69%) 56%,
+            hsl(110deg 20% 75%) 67%,
+            hsl(110deg 19% 82%) 78%,
+            hsl(109deg 16% 89%) 89%,
+            hsl(0deg 0% 96%) 100%
+          );
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          opacity: 0.3;
+          border-radius: 5px;
+          top: 0;
+        }
+
+        .step {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
+          text-align: center;
+
+          .textWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .number {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 50px;
+              width: 50px;
+              padding: 1rem;
+              margin-top: 0.5rem;
+              font-weight: 600;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+              border-radius: 50%;
+              color: $font-black;
+              font-size: $font-big;
+              background-color: #fff;
+            }
+
+            h3 {
+              font-size: $font-big;
+              color: $font-dark-gray;
+              margin: 1rem 0;
+            }
+
+            p {
+              color: $font-gray;
+              font-size: $font-small;
+            }
+          }
+        }
+
+        .stepExtensionWrapper {
+          padding: 1rem;
+
+          .stepExtension {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: #fff;
+
+            p {
+              font-size: $font-micro;
+              margin-bottom: 1.5rem;
+              color: $font-dark-gray;
+            }
+          }
+        }
+      }
+
+      .summary {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        padding: 1rem;
+        border-radius: 5px;
+        h4 {
+          font-size: $font-medium;
+          color: $font-dark-gray;
+          margin: 0.5rem;
+        }
+
+        ul {
+          @include mixin.list-default();
+          list-style-type: "❯";
+
+          li {
+            font-size: $font-micro;
+            padding: 0.5rem;
+            margin-left: 0.5rem;
+
+            &::marker {
+              color: $primary-color-green;
+              font-size: $font-small;
+            }
+          }
+        }
+
+        p {
+          margin: 1.5rem 0.5rem;
+          font-size: $font-micro;
+          color: $font-gray;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@include mixin.tablet() {
+  .section {
+    .wrapper {
+      .content {
+        .cardWrapper {
+          .step {
+            max-width: 80%;
+
+            h3 {
+              font-size: $font-medium;
+            }
+
+            p {
+              max-width: 60%;
+            }
+          }
+
+          .stepExtensionWrapper {
+            display: flex;
+
+            .stepExtension {
+              margin: 0 1rem;
+
+              p {
+                font-size: $font-micro;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+        .summary {
+          h4 {
+            max-width: 80%;
+          }
+
+          ul {
+            li {
+              font-size: $font-small;
+              &::marker {
+                font-size: $font-small;
+              }
+            }
+          }
+
+          p {
+            font-size: $font-small;
+            max-width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
