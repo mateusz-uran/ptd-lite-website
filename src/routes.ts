@@ -34,6 +34,6 @@ export const routes = [
   },
   {
     title: "Kontakt",
-    href: "/",
+    href: "/kontakt",
   },
 ];

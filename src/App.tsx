@@ -2,11 +2,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import Features from "./components/features/Features";
 import Hero from "./components/hero/Hero";
-import HowItWorks from "./components/howitworks/HowItWorks";
 import FeatureSpecification from "./components/features/FeatureSpecification";
 import FeaturesPage from "./components/features/FeaturesPage";
 import HowItWorksPage from "./components/howitworks/HowItWorksPage";
 import HowItWorksWrapper from "./components/howitworks/HowItWorksWrapper";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,7 +16,6 @@ function App() {
         <Layout>
           <Hero />
           <Features />
-          {/* <HowItWorks /> */}
           <HowItWorksWrapper />
         </Layout>
       ),
@@ -42,6 +41,14 @@ function App() {
       element: (
         <Layout>
           <HowItWorksPage />
+        </Layout>
+      ),
+    },
+    {
+      path: "/kontakt",
+      element: (
+        <Layout>
+          <Contact />
         </Layout>
       ),
     },

@@ -3,13 +3,24 @@ import { motion } from "framer-motion";
 
 type PrimaryButtonProps = {
   text: string;
-  onClickFunction: () => void;
+  onClickFunction: (() => void) | null;
+  isDisabled: boolean;
 };
 
-const PrimaryButton = ({ text, onClickFunction }: PrimaryButtonProps) => {
+const PrimaryButton = ({
+  text,
+  onClickFunction,
+  isDisabled,
+}: PrimaryButtonProps) => {
+  const handleClick = () => {
+    if (onClickFunction) {
+      onClickFunction();
+    }
+  };
+
   return (
     <motion.button
-      onClick={onClickFunction}
+      onClick={handleClick}
       whileHover={{
         boxShadow: "rgba(61, 127, 58, 0.5) 0px 2px 6px",
       }}
@@ -19,6 +30,7 @@ const PrimaryButton = ({ text, onClickFunction }: PrimaryButtonProps) => {
         stiffness: 400,
         damping: 16,
       }}
+      disabled={isDisabled}
       className="primary-btn"
     >
       <span>{text}</span>

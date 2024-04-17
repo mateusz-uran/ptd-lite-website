@@ -8,7 +8,7 @@ type SecondaryButtonProps = {
 export const SecondaryButton = ({ children, task }: SecondaryButtonProps) => {
   const handleClick = () => {
     if (task) {
-      task(); // Call the task function if it's not null
+      task();
     }
   };
 
