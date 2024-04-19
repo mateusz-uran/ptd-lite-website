@@ -8,7 +8,7 @@ const HowItWorksPage = () => {
       <div className={style.wrapper}>
         <div className={style.content}>
           {howItWorkSteps.text.map((step, index) => (
-            <div className={style.cardWrapper}>
+            <div key={index} className={style.cardWrapper}>
               <div className={style.step}>
                 <AnimationWrapper variantType="text" listIndex={1}>
                   <div className={style.textWrapper}>

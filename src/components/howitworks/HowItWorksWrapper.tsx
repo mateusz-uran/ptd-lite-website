@@ -5,8 +5,6 @@ import { SecondaryButton } from "../buttons/SecondaryButton";
 import { Link } from "react-router-dom";
 
 const HowItWorksWrapper = () => {
-  console.log(howItWorkSteps);
-
   return (
     <section className={style.section}>
       <div className={style.wrapper}>
@@ -22,7 +20,11 @@ const HowItWorksWrapper = () => {
         <div className={style.contentWrapper}>
           <div className={style.steps}>
             {howItWorkSteps.text.map((step, index) => (
-              <AnimationWrapper variantType="text" listIndex={index}>
+              <AnimationWrapper
+                variantType="text"
+                listIndex={index}
+                key={index}
+              >
                 <div className={style.singleStep}>
                   <span className={style.number}>{index + 1}</span>
                   <div className={style.textWrapper}>
@@ -36,7 +38,11 @@ const HowItWorksWrapper = () => {
           <div className={style.imgWrapper}>
             {howItWorkSteps.images.map((imgSrc, index) => (
               /** TODO: create gif instead of images **/
-              <AnimationWrapper variantType="images" listIndex={index}>
+              <AnimationWrapper
+                variantType="images"
+                listIndex={index}
+                key={index}
+              >
                 <img src={imgSrc} />
               </AnimationWrapper>
             ))}
