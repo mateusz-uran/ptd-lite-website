@@ -46,9 +46,11 @@ const ExtendedSingleFeature = ({
       </div>
       <h4 className={style.h4}>{header}</h4>
       <p className={style.p}>{text}</p>
-      <SecondaryButton task={null}>
-        <Link to={moreInfoLink}>Czytaj więcej</Link>
-      </SecondaryButton>
+      <div className={style.btnWrapper}>
+        <SecondaryButton task={null}>
+          <Link to={moreInfoLink}>Czytaj więcej</Link>
+        </SecondaryButton>
+      </div>
     </motion.div>
   );
 };

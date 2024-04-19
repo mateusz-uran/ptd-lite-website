@@ -18,7 +18,9 @@ const PrimaryButton = ({
     }
   };
 
-  return !isDisabled ? (
+  const disabledTest = false;
+
+  return !disabledTest ? (
     <motion.button
       onClick={handleClick}
       whileHover={{

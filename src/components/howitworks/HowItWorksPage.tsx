@@ -20,7 +20,11 @@ const HowItWorksPage = () => {
               </div>
               <div className={style.stepExtensionWrapper}>
                 {step.extension.map((ext, index) => (
-                  <AnimationWrapper variantType="images" listIndex={index}>
+                  <AnimationWrapper
+                    variantType="images"
+                    listIndex={index}
+                    key={index}
+                  >
                     <div className={style.stepExtension}>
                       <p>{ext.expl}</p>
                       <img src={ext.gif} alt="" />
