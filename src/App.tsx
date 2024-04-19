@@ -12,6 +12,8 @@ import HowItWorksPage from "./components/howitworks/HowItWorksPage";
 import HowItWorksWrapper from "./components/howitworks/HowItWorksWrapper";
 import Contact from "./components/contact/Contact";
 import { useEffect } from "react";
+import ErrorPage from "./ErrorPage";
+import EmptyPage from "./EmptyPage";
 
 const ScrollToTop = (props: any) => {
   const location = useLocation();
@@ -31,6 +33,11 @@ function App() {
           <Hero />
           <Features />
           <HowItWorksWrapper />
+        </Layout>
+      ),
+      errorElement: (
+        <Layout>
+          <EmptyPage message="Ups! Wystąpił błąd, wróć na poprzednią stronę." />
         </Layout>
       ),
     },

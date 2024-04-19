@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
 import { AnimationWrapper } from "../animations/AnimationWrapper";
 import EmptyFeature from "./empty/EmptyFeature";
+import EmptyPage from "../../EmptyPage";
 
 const FeatureSpecification = () => {
   const { featureName } = useParams<{ featureName: string }>();
@@ -72,7 +73,12 @@ const FeatureSpecification = () => {
       </section>
     );
   }
-  return <EmptyFeature />;
+  return (
+    <EmptyPage
+      message="Ups! Niestety, ale nie ma informacji do tej funkcji, wróć proszę na
+  poprzednią stronę."
+    />
+  );
 };
 
 export default FeatureSpecification;
