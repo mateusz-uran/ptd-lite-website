@@ -3,7 +3,6 @@ import { featureSpecification } from "../../content/featuresContent";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
 import { AnimationWrapper } from "../animations/AnimationWrapper";
-import EmptyFeature from "./empty/EmptyFeature";
 import EmptyPage from "../../EmptyPage";
 
 const FeatureSpecification = () => {

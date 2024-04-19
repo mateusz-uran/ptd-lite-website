@@ -12,7 +12,6 @@ import HowItWorksPage from "./components/howitworks/HowItWorksPage";
 import HowItWorksWrapper from "./components/howitworks/HowItWorksWrapper";
 import Contact from "./components/contact/Contact";
 import { useEffect } from "react";
-import ErrorPage from "./ErrorPage";
 import EmptyPage from "./EmptyPage";
 
 const ScrollToTop = (props: any) => {
