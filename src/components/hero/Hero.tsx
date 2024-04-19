@@ -32,7 +32,11 @@ const Hero = () => {
               transition={{ duration: 1.2, type: "spring" }}
               className={style.btnWrapper}
             >
-              <Button text={"START"} />
+              <Button
+                text={"START"}
+                onClickFunction={null}
+                isDisabled={false}
+              />
             </motion.div>
           </motion.div>
           <motion.div

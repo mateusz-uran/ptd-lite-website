@@ -4,7 +4,6 @@
 .section {
   .content {
     @include mixin.wrapper();
-
     .mobile {
       display: none;
     }

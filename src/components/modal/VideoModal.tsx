@@ -4,10 +4,16 @@ import { useEffect } from "react";
 
 type VideoModalProps = {
   isShowing: boolean;
-  onCloseButtonClick: () => void;
+  onCloseButtonClick: (() => void) | null;
 };
 
 const VideoModal = ({ isShowing, onCloseButtonClick }: VideoModalProps) => {
+  const handleClick = () => {
+    if (onCloseButtonClick) {
+      onCloseButtonClick();
+    }
+  };
+
   useEffect(() => {
     if (isShowing) {
       document.body.style.overflow = "hidden";
@@ -31,7 +37,7 @@ const VideoModal = ({ isShowing, onCloseButtonClick }: VideoModalProps) => {
           Click on the close button to close the modal.
         </div>
         <div className={style.footer}>
-          <button onClick={onCloseButtonClick}>Close Modal</button>
+          <button onClick={handleClick}>Close Modal</button>
         </div>
       </div>
     </div>,

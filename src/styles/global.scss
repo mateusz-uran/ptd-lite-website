@@ -1,3 +1,4 @@
+@use "./mixin.scss" as mixin;
 @import "./variables.scss";
 @import "reset.scss";
 
@@ -17,10 +18,27 @@ body {
   padding: 0.5rem 1rem;
   box-shadow: rgba(61, 127, 58, 0.25) 0px 2px 4px;
   font-size: $font-small;
+  min-width: 110px;
+  min-height: 50px;
+  justify-content: center;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 
   .icon {
     margin-left: 0.5rem;
   }
+}
+
+.loader {
+  width: 35px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 8px;
+  background: $primary-color-green;
+  mask: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  mask-composite: subtract;
 }
 
 .secondary-btn {
@@ -33,4 +51,66 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   border: 1px solid #d5d9d9;
+}
+
+.snackbarWrapper {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: auto;
+  max-width: fit-content;
+  left: 1rem;
+
+  .snackbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: $primary-color-gray;
+    font-size: $font-small;
+
+    &.success {
+      span {
+        color: green;
+      }
+    }
+
+    &.error {
+      span {
+        color: red;
+      }
+    }
+
+    span {
+      margin-right: 1rem;
+      font-size: $font-big;
+    }
+
+    button {
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+      color: $font-gray;
+      margin-left: 1rem;
+      font-size: $font-big;
+    }
+  }
+
+  @include mixin.tablet() {
+    left: auto;
+
+    .snackbar {
+      span {
+        font-size: $font-medium;
+      }
+
+      p {
+        font-size: $font-micro;
+      }
+
+      button {
+        font-size: $font-medium;
+      }
+    }
+  }
 }

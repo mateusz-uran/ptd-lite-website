@@ -18,7 +18,7 @@ const PrimaryButton = ({
     }
   };
 
-  return (
+  return !isDisabled ? (
     <motion.button
       onClick={handleClick}
       whileHover={{
@@ -36,6 +36,14 @@ const PrimaryButton = ({
       <span>{text}</span>
       <IoIosArrowForward className="icon" />
     </motion.button>
+  ) : (
+    <button disabled={isDisabled} className="primary-btn">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ ease: "linear", duration: 1, repeat: Infinity }}
+        className="loader"
+      ></motion.div>
+    </button>
   );
 };
 
