@@ -103,7 +103,11 @@ const NavbMobile = ({
                 );
               })}
               <div className={style.buttonWrapper}>
-                <PrimaryButton text={"Login"} onClickFunction={loginFunction} />
+                <PrimaryButton
+                  text={"Login"}
+                  onClickFunction={loginFunction}
+                  isDisabled={false}
+                />
               </div>
             </ul>
           </motion.div>

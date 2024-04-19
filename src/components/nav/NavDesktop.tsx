@@ -83,7 +83,11 @@ const NavDesktop = ({
                 damping: 16,
               }}
             >
-              <PrimaryButton text={"Login"} onClickFunction={loginFunction} />
+              <PrimaryButton
+                text={"Login"}
+                onClickFunction={loginFunction}
+                isDisabled={false}
+              />
             </motion.div>
           </ul>
         </div>
