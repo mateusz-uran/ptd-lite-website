@@ -28,11 +28,13 @@ function App() {
     {
       path: "/",
       element: (
-        <Layout>
-          <Hero />
-          <Features />
-          <HowItWorksWrapper />
-        </Layout>
+        <ScrollToTop>
+          <Layout>
+            <Hero />
+            <Features />
+            <HowItWorksWrapper />
+          </Layout>
+        </ScrollToTop>
       ),
       errorElement: (
         <Layout>

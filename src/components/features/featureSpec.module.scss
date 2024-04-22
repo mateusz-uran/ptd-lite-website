@@ -2,6 +2,10 @@
 @import "../../styles/variables.scss";
 
 .section {
+  background-image: url("/images/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   .points {
     max-height: 120px;
     width: 100%;
@@ -38,6 +42,7 @@
           border-radius: 10px;
           border: 1px solid rgba(0, 0, 0, 0.1);
           box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+          background: #fff;
 
           &:nth-child(even) {
             margin-left: -1.5rem;
@@ -67,8 +72,9 @@
         }
 
         figcaption {
-          background-color: $primary-color-gray;
-          background-color: rgba(245, 249, 252, 0.7);
+          background-color: $primary-color-green;
+          color: $font-bright;
+          font-weight: 600;
           border-bottom-left-radius: 15px;
           border-bottom-right-radius: 15px;
           text-align: center;
@@ -110,12 +116,12 @@
         margin-top: 1rem;
         padding: 1rem;
         border-radius: 10px;
-        background-color: rgba(48, 55, 58, 0.1);
+        background-color: rgba(48, 55, 58, 0.6);
 
         .subText {
           margin: 1rem 0;
           font-size: $font-micro;
-          color: $font-dark-gray;
+          color: $font-bright;
           font-weight: 600;
           font-style: italic;
           line-height: 1.8;

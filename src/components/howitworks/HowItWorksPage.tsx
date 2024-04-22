@@ -37,11 +37,7 @@ const HowItWorksPage = () => {
 
           <AnimationWrapper variantType="text" listIndex={1}>
             <div className={style.summary}>
-              <h4>
-                {howItWorkSteps.summary.header}
-                To wszystko, proces tworzenia karty drogowej z PTD Lite jest
-                znacznie szybszy.
-              </h4>
+              <h4>{howItWorkSteps.summary.header}</h4>
               {howItWorkSteps.summary.list.map((el, index) => (
                 <ul key={index}>
                   <li>{el}</li>
