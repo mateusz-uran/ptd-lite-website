@@ -1,9 +1,9 @@
 import { useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 type AnimationWrapperProps = {
-  children: JSX.Element;
+  children: ReactNode;
   variantType: string;
   listIndex: number;
 };
@@ -46,7 +46,12 @@ export const AnimationWrapper = ({
   }, [isInView]);
 
   return (
-    <div ref={ref} className="animation-wrapper" style={{ overflow: "hidden" }}>
+    <div
+      ref={ref}
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <motion.div
         variants={selectedVariant}
         initial="hidden"

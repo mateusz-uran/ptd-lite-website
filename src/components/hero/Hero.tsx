@@ -1,10 +1,16 @@
 import { content } from "../../content/heroContent";
-import Button from "../buttons/PrimaryButton";
+import PrimaryButton from "../buttons/PrimaryButton";
 import dashboard from "/images/dashboard_framed.png";
 import style from "./hero.module.scss";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const goToGetStarted = (): void => {
+    navigate("/start");
+  };
+
   return (
     <section className={style.section}>
       {
@@ -32,9 +38,9 @@ const Hero = () => {
               transition={{ duration: 1.2, type: "spring" }}
               className={style.btnWrapper}
             >
-              <Button
+              <PrimaryButton
                 text={"START"}
-                onClickFunction={null}
+                onClickFunction={goToGetStarted}
                 isDisabled={false}
               />
             </motion.div>

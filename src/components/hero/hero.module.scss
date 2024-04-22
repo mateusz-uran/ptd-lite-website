@@ -15,16 +15,16 @@
     @include mixin.wrapper();
 
     .side {
-      .h2 {
+      h2 {
         font-size: $font-big;
         padding: 1.5rem 0;
         color: $font-dark-gray;
       }
 
-      .p {
+      p {
         font-size: $font-medium;
         color: $font-gray;
-        font-weight: 400;
+        font-weight: 600;
         padding: 1rem 0;
       }
 
@@ -32,8 +32,8 @@
         padding: 1rem 0;
       }
 
-      .h2,
-      .p,
+      h2,
+      p,
       .btnWrapper {
         @include mixin.contentWrapper();
       }

@@ -1,3 +1,4 @@
+import { AnimationWrapper } from "../animations/AnimationWrapper";
 import style from "./contact.module.scss";
 import ContactForm from "./ContactForm";
 
@@ -6,9 +7,16 @@ const Contact = () => {
     <section className={style.section}>
       <div className={style.content}>
         <div className={style.mobile}>
-          <img src="/images/dash mobile-portrait.png" />
+          <AnimationWrapper variantType="text" listIndex={1}>
+            <img src="/images/dash mobile-portrait.png" />
+          </AnimationWrapper>
         </div>
-        <ContactForm />
+        <ContactForm header="Masz pytania?">
+          <p>
+            Zapraszam do kontaktu, postaraj się dokładnie przedstawić swoje
+            stanowisko.
+          </p>
+        </ContactForm>
       </div>
     </section>
   );

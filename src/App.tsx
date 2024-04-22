@@ -13,6 +13,7 @@ import HowItWorksWrapper from "./components/howitworks/HowItWorksWrapper";
 import Contact from "./components/contact/Contact";
 import { useEffect } from "react";
 import EmptyPage from "./EmptyPage";
+import GetStarted from "./components/start/GetStarted";
 
 const ScrollToTop = (props: any) => {
   const location = useLocation();
@@ -68,6 +69,16 @@ function App() {
         <ScrollToTop>
           <Layout>
             <HowItWorksPage />
+          </Layout>
+        </ScrollToTop>
+      ),
+    },
+    {
+      path: "/start",
+      element: (
+        <ScrollToTop>
+          <Layout>
+            <GetStarted />
           </Layout>
         </ScrollToTop>
       ),
