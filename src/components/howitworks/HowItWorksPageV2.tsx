@@ -1,9 +1,7 @@
-import React from "react";
 import style from "./howItWorksPage.module.scss";
 import { howItWorkSteps } from "../../content/howItWorksContent";
 import { AnimationWrapper } from "../animations/AnimationWrapper";
 import { AnimationFadeInWrapper } from "../animations/AnimationFadeIn";
-import { FaRegCircleCheck } from "react-icons/fa6";
 
 const HowItWorksPageV2 = () => {
   return (
@@ -50,15 +48,21 @@ const HowItWorksPageV2 = () => {
           </div>
 
           <div className={style.endingSection}>
-            <h3>{howItWorkSteps.summary.header}</h3>
-            <p className={style.paraf}>{howItWorkSteps.summary.paraf}</p>
+            <AnimationFadeInWrapper listIndex={1}>
+              <h3>{howItWorkSteps.summary.header}</h3>
+            </AnimationFadeInWrapper>
+            <AnimationFadeInWrapper listIndex={1}>
+              <p className={style.paraf}>{howItWorkSteps.summary.paraf}</p>
+            </AnimationFadeInWrapper>
             <ul>
               {howItWorkSteps.summary.list.map((el, i) => (
                 <div key={i}>
-                  <li>
-                    <img src="/images/howitworks/check.svg" alt="" />
-                    <p>{el}</p>
-                  </li>
+                  <AnimationWrapper variantType="text" listIndex={i}>
+                    <li>
+                      <img src="/images/howitworks/check.svg" alt="" />
+                      <p>{el}</p>
+                    </li>
+                  </AnimationWrapper>
                 </div>
               ))}
             </ul>
