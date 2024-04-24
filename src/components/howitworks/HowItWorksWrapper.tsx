@@ -19,7 +19,7 @@ const HowItWorksWrapper = () => {
 
         <div className={style.contentWrapper}>
           <div className={style.steps}>
-            {howItWorkSteps.text.map((step, index) => (
+            {howItWorkSteps.stepContent.map((step, index) => (
               <AnimationWrapper
                 variantType="text"
                 listIndex={index}
@@ -36,14 +36,14 @@ const HowItWorksWrapper = () => {
             ))}
           </div>
           <div className={style.imgWrapper}>
-            {howItWorkSteps.images.map((imgSrc, index) => (
+            {howItWorkSteps.gifs.map((gifSrc, index) => (
               /** TODO: create gif instead of images **/
               <AnimationWrapper
                 variantType="images"
                 listIndex={index}
                 key={index}
               >
-                <img src={imgSrc} />
+                <img src={gifSrc} />
               </AnimationWrapper>
             ))}
           </div>

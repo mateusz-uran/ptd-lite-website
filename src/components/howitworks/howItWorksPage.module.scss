@@ -2,149 +2,211 @@
 @import "../../styles/variables.scss";
 
 .section {
-  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
   .wrapper {
     @include mixin.wrapper();
 
-    height: 100%;
-    width: 100%;
     .content {
-      height: 100%;
-      width: 100%;
+      @include mixin.contentWrapper();
 
-      .cardWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
-          rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-        border-radius: 5px;
-        margin: 2rem 0 4rem 0;
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: "";
-          background-image: linear-gradient(
-            45deg,
-            hsl(117deg 37% 36%) 0%,
-            hsl(115deg 29% 43%) 11%,
-            hsl(113deg 22% 49%) 22%,
-            hsl(112deg 21% 55%) 33%,
-            hsl(111deg 21% 62%) 44%,
-            hsl(111deg 21% 69%) 56%,
-            hsl(110deg 20% 75%) 67%,
-            hsl(110deg 19% 82%) 78%,
-            hsl(109deg 16% 89%) 89%,
-            hsl(0deg 0% 96%) 100%
-          );
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-          opacity: 0.3;
+      .stepWrapper {
+        .singleStep {
+          margin: 1rem;
+          position: relative;
           border-radius: 5px;
-          top: 0;
-        }
-
-        .step {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
           padding: 1rem;
-          text-align: center;
 
-          .textWrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .number {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height: 50px;
-              width: 50px;
-              padding: 1rem;
-              margin-top: 0.5rem;
-              font-weight: 600;
-              border: 1px solid rgba(0, 0, 0, 0.1);
-              box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-              border-radius: 50%;
-              color: $font-black;
-              font-size: $font-big;
-              background-color: #fff;
-            }
-
-            h3 {
-              font-size: $font-big;
-              color: $font-dark-gray;
-              margin: 1rem 0;
-            }
-
-            p {
-              color: $font-gray;
-              font-size: $font-small;
+          &:nth-child(even) {
+            &::after {
+              position: absolute;
+              content: "";
+              background-image: linear-gradient(
+                45deg,
+                hsl(198deg 9% 21%) 0%,
+                hsl(198deg 8% 24%) 0%,
+                hsl(198deg 7% 27%) 0%,
+                hsl(198deg 6% 31%) 0%,
+                hsl(198deg 5% 34%) 1%,
+                hsl(198deg 4% 37%) 2%,
+                hsl(198deg 4% 41%) 3%,
+                hsl(198deg 3% 45%) 5%,
+                hsl(198deg 3% 48%) 7%,
+                hsl(198deg 3% 52%) 10%,
+                hsl(198deg 3% 56%) 13%,
+                hsl(198deg 3% 59%) 18%,
+                hsl(198deg 3% 63%) 23%,
+                hsl(198deg 3% 67%) 29%,
+                hsl(199deg 3% 71%) 36%,
+                hsl(199deg 3% 75%) 45%,
+                hsl(199deg 3% 79%) 56%,
+                hsl(199deg 3% 83%) 69%,
+                hsl(199deg 3% 87%) 83%,
+                hsl(199deg 3% 91%) 94%,
+                hsl(199deg 2% 95%) 99%,
+                hsl(0deg 0% 99%) 100%
+              );
+              border-radius: 5px;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: -1;
+              opacity: 0.3;
             }
           }
-        }
 
-        .stepExtensionWrapper {
-          padding: 1rem;
+          &:nth-child(odd) {
+            &::after {
+              position: absolute;
+              content: "";
+              background-image: linear-gradient(
+                45deg,
+                hsl(117deg 37% 36%) 0%,
+                hsl(116deg 33% 39%) 0%,
+                hsl(115deg 30% 42%) 0%,
+                hsl(114deg 26% 45%) 0%,
+                hsl(114deg 24% 48%) 1%,
+                hsl(113deg 22% 51%) 2%,
+                hsl(113deg 22% 53%) 3%,
+                hsl(112deg 22% 56%) 5%,
+                hsl(112deg 22% 59%) 7%,
+                hsl(112deg 22% 62%) 10%,
+                hsl(111deg 22% 65%) 13%,
+                hsl(111deg 22% 68%) 18%,
+                hsl(111deg 22% 71%) 23%,
+                hsl(110deg 22% 74%) 29%,
+                hsl(110deg 22% 77%) 36%,
+                hsl(110deg 22% 80%) 45%,
+                hsl(110deg 22% 84%) 56%,
+                hsl(110deg 22% 87%) 69%,
+                hsl(109deg 22% 90%) 83%,
+                hsl(109deg 21% 93%) 94%,
+                hsl(109deg 19% 96%) 99%,
+                hsl(0deg 0% 99%) 100%
+              );
+              border-radius: 5px;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: -1;
+              opacity: 0.3;
+            }
+          }
 
-          .stepExtension {
-            margin-bottom: 1.5rem;
+          .textWrapper {
+            .abstraWrapper {
+              img {
+                height: 150px;
+              }
+            }
+
+            h4,
+            p {
+              margin: 2rem 0;
+              font-weight: 400;
+            }
+            h4 {
+              font-size: $font-large;
+            }
+
+            p {
+              color: $font-dark-gray;
+            }
+
+            ul {
+              @include mixin.list-default();
+
+              li {
+                align-items: center;
+                display: flex;
+                gap: 1rem;
+                font-size: $font-micro;
+                color: $font-dark-gray;
+                margin: 2rem 0;
+
+                &::before {
+                  align-self: start;
+                  background-image: linear-gradient(
+                    45deg,
+                    hsl(117deg 37% 36%) 0%,
+                    hsl(140deg 42% 37%) 11%,
+                    hsl(154deg 46% 38%) 22%,
+                    hsl(163deg 44% 39%) 33%,
+                    hsl(170deg 38% 43%) 44%,
+                    hsl(177deg 30% 47%) 56%,
+                    hsl(183deg 24% 52%) 67%,
+                    hsl(188deg 21% 57%) 78%,
+                    hsl(194deg 16% 61%) 89%,
+                    hsl(199deg 9% 65%) 100%
+                  );
+                  border-radius: 100%;
+                  content: "";
+                  flex-shrink: 0;
+                  height: 1rem;
+                  margin-block-start: 0.3em;
+                  width: 1rem;
+                }
+              }
+            }
+          }
+
+          .imagesWrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 1rem;
-            border-radius: 5px;
-            background-color: #fff;
+            justify-content: center;
 
-            p {
-              font-size: $font-micro;
-              margin-bottom: 1.5rem;
-              color: $font-dark-gray;
+            img {
+              margin: 2rem 0;
+              width: 100%;
             }
           }
         }
       }
 
-      .summary {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+      .endingSection {
         padding: 1rem;
-        border-radius: 5px;
-        h4 {
+
+        h3,
+        .paraf,
+        ul {
+          margin: 2rem 0;
+        }
+
+        h3 {
           font-size: $font-medium;
+          font-weight: 400;
+          color: $font-black;
+        }
+
+        .paraf {
+          font-size: $font-micro;
           color: $font-dark-gray;
-          margin: 0.5rem;
+          font-weight: 600;
+          line-height: 1.8;
         }
 
         ul {
           @include mixin.list-default();
-          list-style-type: "❯";
 
           li {
             font-size: $font-micro;
-            padding: 0.5rem;
-            margin-left: 0.5rem;
+            display: flex;
+            margin: 1rem 0;
+            align-items: center;
+            gap: 1rem;
 
-            &::marker {
-              color: $primary-color-green;
-              font-size: $font-small;
+            img {
+              max-height: 20px;
             }
           }
-        }
-
-        p {
-          margin: 1.5rem 0.5rem;
-          font-size: $font-micro;
-          color: $font-gray;
-          font-weight: 600;
         }
       }
     }
@@ -155,49 +217,42 @@
   .section {
     .wrapper {
       .content {
-        .cardWrapper {
-          .step {
-            max-width: 80%;
-
-            h3 {
-              font-size: $font-medium;
-            }
-
-            p {
-              max-width: 60%;
-            }
-          }
-
-          .stepExtensionWrapper {
+        .stepWrapper {
+          .singleStep {
             display: flex;
 
-            .stepExtension {
-              margin: 0 1rem;
+            .textWrapper,
+            .imagesWrapper {
+              width: 50%;
+            }
 
-              p {
-                font-size: $font-micro;
-                font-weight: 600;
+            .textWrapper {
+              li {
+                max-width: 90%;
               }
             }
           }
         }
-        .summary {
-          h4 {
+
+        .endingSection {
+          h3,
+          .paraf {
             max-width: 80%;
           }
+        }
+      }
+    }
+  }
+}
 
-          ul {
-            li {
-              font-size: $font-small;
-              &::marker {
-                font-size: $font-small;
-              }
-            }
-          }
-
-          p {
-            font-size: $font-small;
-            max-width: 80%;
+@include mixin.tablet() {
+  .section {
+    .wrapper {
+      .content {
+        .endingSection {
+          h3,
+          .paraf {
+            max-width: 70%;
           }
         }
       }

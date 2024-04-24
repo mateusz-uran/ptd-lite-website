@@ -1,8 +1,11 @@
 import { AnimationWrapper } from "../animations/AnimationWrapper";
 import style from "./howItWorksPage.module.scss";
 import { howItWorkSteps } from "../../content/howItWorksContent";
+import HowItWorksPageV2 from "./HowItWorksPageV2";
 
 const HowItWorksPage = () => {
+  return <HowItWorksPageV2 />;
+
   return (
     <section className={style.section}>
       <div className={style.wrapper}>
