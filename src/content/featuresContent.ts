@@ -65,37 +65,29 @@ export const features = [
 export const featureSpecification = [
   {
     id: "ladunek",
-    baner:
-      "/images/features/cargo/concept-communication-with-pins-map_smaller.jpg",
-    header: "Punkty trasy / ładunki",
-    text: [
-      "Kierowca odbierając i dostarczając dany towar tworzy punkty trasy, są to odcinki ZAŁADUNEK - ROZŁADUNEK, aplikacja posiada funkcję grupowania punktów gdzie ładunek jest ten sam.",
-
-      "Przykładowo rozwożąc truskawki do kilku miejsc można utworzyć grupę z nazwą towaru (truskawki), dodatkowo można dodać tonaż i temperature.",
-
-      "Te dane są opcjonalne, podobnie jak notatki kierowcy do danego ładunku.",
-    ],
-    imageLinks: [
-      {
-        link: "/images/features/cargo/add_cargo.png",
-        caption: "Użytkownik musi wybrać trasy bez utworzonego ładunku.",
-      },
-      {
-        link: "/images/features/cargo/add_cargo_form.png",
-        caption:
-          "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
-      },
-      {
-        link: "/images/features/cargo/add_cargo_ready.png",
-        caption:
-          "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
-      },
-    ],
+    header: "Grupowanie",
+    subheader: "Trasa i ładunek",
+    text: {
+      header: "Jakis naglowek krotki",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra ut ex a laoreet. Curabitur ac nisl ac lorem ullamcorper aliquet. Orci varius natoque penatibus.",
+    },
     videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
-    subtext: [
-      "Na filmie poglądowym widać, że dodaną grupę / ładunek można dowolnie edytować tzn. zmieniać nazwę czy tonaż.",
-      "Pozostawia to użytkownikowi pełną autonomię jak ma to finalnie wyglądać na karcie drogowej.",
+    images: [
+      "/images/features/cargo/add_cargo.png",
+      "/images/features/cargo/add_cargo_form.png",
+      "/images/features/cargo/add_cargo_form.png",
+      "/images/features/cargo/add_cargo_ready.png",
     ],
+    longText: {
+      header: "Jakis tytul do opisu funkcji",
+      parafs: [
+        "Trasy, które nie mają przypisanej grupy tj. ładunku należy wybrać aby dodać do nowej grupy.",
+        "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
+        "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+      ],
+    },
   },
   // {
   //   id: "faktura",

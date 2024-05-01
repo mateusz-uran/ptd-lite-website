@@ -13,3 +13,37 @@ $font-small: 1rem;
 $font-medium: 1.2rem;
 $font-big: 1.8rem;
 $font-large: 2.1rem;
+
+// //gradients
+$gradients: (
+  ladunek: (
+    #ecc9d8,
+    #ffffff,
+    #fde6f0,
+  ),
+  faktura: (
+    #fbd48e,
+    #ffffff,
+    #fff6e6,
+  ),
+  cmr: (
+    #a080a0,
+    #ffffff,
+    #faf1fa,
+  ),
+  statystyki: (
+    #9d9fd4,
+    #ffffff,
+    #9d9fd4,
+  ),
+  archiwum: (
+    #9ad582,
+    #ffffff,
+    #eff7ec,
+  ),
+  aktualizacje: (
+    #94dbd4,
+    #ffffff,
+    #edf9f8,
+  ),
+);

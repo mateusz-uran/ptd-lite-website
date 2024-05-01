@@ -6,7 +6,6 @@ import {
 import Layout from "./Layout";
 import Features from "./components/features/Features";
 import Hero from "./components/hero/Hero";
-import FeatureSpecification from "./components/features/FeatureSpecification";
 import FeaturesPage from "./components/features/FeaturesPage";
 import HowItWorksWrapper from "./components/howitworks/HowItWorksWrapper";
 import Contact from "./components/contact/Contact";
@@ -14,6 +13,7 @@ import { useEffect } from "react";
 import EmptyPage from "./EmptyPage";
 import GetStarted from "./components/start/GetStarted";
 import HowItWorksPageV2 from "./components/howitworks/HowItWorksPageV2";
+import FeatureSpecificationV3 from "./components/features/FeatureSpecificationV3";
 
 const ScrollToTop = (props: any) => {
   const location = useLocation();
@@ -58,7 +58,7 @@ function App() {
       element: (
         <ScrollToTop>
           <Layout>
-            <FeatureSpecification />
+            <FeatureSpecificationV3 />
           </Layout>
         </ScrollToTop>
       ),

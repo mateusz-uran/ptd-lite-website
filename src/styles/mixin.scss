@@ -38,6 +38,12 @@ $font-black: #000;
   margin: 1rem;
 }
 
+@mixin mobile {
+  @media (min-width: 620px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: 840px) {
     @content;
@@ -48,4 +54,14 @@ $font-black: #000;
   @media (min-width: 1025px) {
     @content;
   }
+}
+
+@mixin gradient($gradient-name) {
+  $values: map-get($gradients, $gradient-name);
+  background: linear-gradient(
+    nth($values, 1),
+    nth($values, 2),
+    nth($values, 3),
+    nth($values, 4)
+  );
 }

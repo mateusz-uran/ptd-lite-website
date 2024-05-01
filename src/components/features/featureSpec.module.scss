@@ -2,129 +2,127 @@
 @import "../../styles/variables.scss";
 
 .section {
-  background-image: url("/images/bg2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  .points {
-    max-height: 120px;
+  display: flex;
+  flex-direction: column;
+
+  .header {
     width: 100%;
-    object-fit: cover;
-    opacity: 0.9;
+    min-height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .barsWrapper {
+      display: flex;
+      position: absolute;
+      height: 100%;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      z-index: -1;
+
+      .bar {
+        display: block;
+        width: 1px;
+        content: "";
+        background-color: $primary-color-gray;
+      }
+    }
+
+    .hTextWrapper {
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+
+      p {
+        font-size: $font-micro;
+        color: $font-gray;
+      }
+      h3 {
+        font-size: $font-big;
+        color: $font-dark-gray;
+      }
+    }
   }
 
-  .wrapper {
-    @include mixin.wrapper();
+  .middle {
+    @each $key, $value in $gradients {
+      @if map-has-key($gradients, $key) and $value and length($value) > 0 {
+        &.#{$key} {
+          background: linear-gradient(221deg, #{$value});
+          background-size: 600% 600%;
+          -webkit-animation: movingBackgroundGradient 21s ease infinite;
+          -moz-animation: movingBackgroundGradient 21s ease infinite;
+          animation: movingBackgroundGradient 21s ease infinite;
+        }
+      }
+    }
 
     .content {
-      @include mixin.contentWrapper();
+      @include mixin.wrapper();
       display: flex;
       flex-direction: column;
       align-items: center;
 
       .textWrapper {
-        color: $font-dark-gray;
-        display: flex;
-        flex-direction: column;
+        margin: 1rem 0;
+        background: transparent;
 
-        h3 {
-          text-align: center;
-          margin-bottom: 1.5rem;
-          color: #30373a;
+        h5 {
           font-size: $font-medium;
+          color: $font-dark-gray;
+          margin-bottom: 1rem;
         }
-
-        .paragraphs {
-          margin: 1.5rem 0;
-          font-size: $font-micro;
-          font-weight: 600;
-          padding: 1rem;
-          border-radius: 10px;
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-          background: #fff;
-
-          &:nth-child(even) {
-            margin-left: -1.5rem;
-          }
-
-          &:nth-child(odd) {
-            margin-right: -1.5rem;
-          }
-        }
-      }
-
-      .imgWrapper {
-        margin: 1.5rem 0;
-        -webkit-box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
-        -moz-box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
-        box-shadow: 0px 0px 38px -24px rgba(66, 68, 90, 1);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-        img {
-          max-width: 100%;
-          height: auto;
-          border-top-left-radius: 10px;
-          border-top-right-radius: 10px;
-        }
-
-        figcaption {
-          background-color: $primary-color-green;
-          color: $font-bright;
-          font-weight: 600;
-          border-bottom-left-radius: 15px;
-          border-bottom-right-radius: 15px;
-          text-align: center;
-          font-size: $font-micro;
-          padding: 1rem 0.5rem;
-        }
-      }
-
-      .videoWrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
 
         p {
-          padding: 0.5rem;
-          font-size: $font-extra-small;
-          text-align: left;
-          width: 100%;
-          background: $primary-color-gray;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          border-bottom: 0;
+          font-size: $font-micro;
+          color: $font-dark-gray;
         }
+      }
 
-        .playerWrapper {
+      .video {
+        height: 300px;
+        width: 300px;
+        border-radius: 400px;
+        overflow: hidden;
+        margin: 1rem 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("/images/features/cargo/cargo_thumb.png");
+        background-size: cover;
+
+        .videoBtn {
+          background-image: url("/images/features/arrow.svg");
+          background-size: cover;
+          background-position: center;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
           position: relative;
-          padding-top: 56.25%;
 
-          .reactPlayer {
+          span {
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
           }
         }
       }
+    }
+  }
+}
 
-      .subTextWrapper {
-        margin-top: 1rem;
-        padding: 1rem;
-        border-radius: 10px;
-        background-color: rgba(48, 55, 58, 0.6);
-
-        .subText {
-          margin: 1rem 0;
-          font-size: $font-micro;
-          color: $font-bright;
-          font-weight: 600;
-          font-style: italic;
-          line-height: 1.8;
+@include mixin.mobile() {
+  .section {
+    .middle {
+      .content {
+        .textWrapper {
+          max-width: 80%;
         }
       }
     }
@@ -133,57 +131,101 @@
 
 @include mixin.tablet() {
   .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .header {
+      .hTextWrapper {
+        p {
+          font-size: $font-small;
+        }
 
-    .points {
-      max-height: 180px;
-      object-fit: cover;
-      opacity: 0.9;
+        h3 {
+          font-size: $font-large;
+        }
+      }
     }
 
-    .wrapper {
+    .middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       .content {
         .textWrapper {
-          align-items: center;
-          margin: 2rem 0;
-          h3 {
-            font-size: $font-big;
-          }
-
-          .paragraphs {
-            font-size: $font-small;
-            width: 60%;
-            padding: 1.5rem;
-          }
-        }
-
-        .imgWrapper {
-          figcaption {
-            max-width: 600px;
-            font-size: $font-small;
-          }
-        }
-
-        .videoWrapper {
-          width: auto;
+          max-width: 65%;
 
           p {
-            min-width: 600px;
-            padding: 0.8rem;
-            font-size: $font-micro;
-          }
-        }
-
-        .subTextWrapper {
-          width: 55%;
-
-          .subText {
             font-size: $font-small;
+
+            &::before {
+              left: -10px;
+            }
+
+            &::after {
+              right: -10px;
+            }
           }
         }
       }
     }
+  }
+}
+
+@include mixin.desktop() {
+  .section {
+    .middle {
+      .content {
+        flex-direction: row;
+        justify-content: space-around;
+
+        .textWrapper {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+// @each $key, $value in $gradients {
+//   @if map-has-key($gradients, $key) and $value and length($value) > 0 {
+//     &.#{$key} {
+//       background: linear-gradient(221deg, #{$value});
+//       background-size: 600% 600%;
+//       -webkit-animation: AnimationName 21s ease infinite;
+//       -moz-animation: AnimationName 21s ease infinite;
+//       animation: AnimationName 21s ease infinite;
+//     }
+//   }
+// }
+
+@-webkit-keyframes movingBackgroundGradient {
+  0% {
+    background-position: 99% 0%;
+  }
+  50% {
+    background-position: 2% 100%;
+  }
+  100% {
+    background-position: 99% 0%;
+  }
+}
+@-moz-keyframes movingBackgroundGradient {
+  0% {
+    background-position: 99% 0%;
+  }
+  50% {
+    background-position: 2% 100%;
+  }
+  100% {
+    background-position: 99% 0%;
+  }
+}
+@keyframes movingBackgroundGradient {
+  0% {
+    background-position: 99% 0%;
+  }
+  50% {
+    background-position: 2% 100%;
+  }
+  100% {
+    background-position: 99% 0%;
   }
 }
