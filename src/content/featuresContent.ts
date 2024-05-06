@@ -74,10 +74,10 @@ export const featureSpecification = [
     },
     videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
     images: [
-      "/images/features/cargo/add_cargo.png",
-      "/images/features/cargo/add_cargo_form.png",
-      "/images/features/cargo/add_cargo_form.png",
-      "/images/features/cargo/add_cargo_ready.png",
+      "/images/features/cargo/cargo1.png",
+      "/images/features/cargo/cargo2.png",
+      "/images/features/cargo/cargo3.png",
+      "/images/features/cargo/cargo4.png",
     ],
     longText: {
       header: "Jakis tytul do opisu funkcji",
@@ -86,22 +86,156 @@ export const featureSpecification = [
         "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
         "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+      ],
+    },
+    summary: "Przeglądaj resztę funkcji aby poznać aplikację:",
+  },
+  {
+    id: "faktura",
+    header: "head",
+    subheader: "sub head",
+    text: {
+      header: "Jakis naglowek krotki",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra ut ex a laoreet. Curabitur ac nisl ac lorem ullamcorper aliquet. Orci varius natoque penatibus.",
+    },
+    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    images: [
+      "/images/features/cargo/cargo1.png",
+      "/images/features/cargo/cargo2.png",
+      "/images/features/cargo/cargo3.png",
+      "/images/features/cargo/cargo4.png",
+    ],
+    longText: {
+      header: "Jakis tytul do opisu funkcji",
+      parafs: [
+        "Trasy, które nie mają przypisanej grupy tj. ładunku należy wybrać aby dodać do nowej grupy.",
+        "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
+        "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
       ],
     },
   },
-  // {
-  //   id: "faktura",
-  // },
-  // {
-  //   id: "cmr",
-  // },
-  // {
-  //   id: "statystyki",
-  // },
-  // {
-  //   id: "archiwum",
-  // },
-  // {
-  //   id: "aktualizacje",
-  // },
+  {
+    id: "cmr",
+    header: "head",
+    subheader: "sub head",
+    text: {
+      header: "Jakis naglowek krotki",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra ut ex a laoreet. Curabitur ac nisl ac lorem ullamcorper aliquet. Orci varius natoque penatibus.",
+    },
+    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    images: [
+      "/images/features/cargo/cargo1.png",
+      "/images/features/cargo/cargo2.png",
+      "/images/features/cargo/cargo3.png",
+      "/images/features/cargo/cargo4.png",
+    ],
+    longText: {
+      header: "Jakis tytul do opisu funkcji",
+      parafs: [
+        "Trasy, które nie mają przypisanej grupy tj. ładunku należy wybrać aby dodać do nowej grupy.",
+        "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
+        "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+      ],
+    },
+  },
+  {
+    id: "statystyki",
+    header: "head",
+    subheader: "sub head",
+    text: {
+      header: "Jakis naglowek krotki",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra ut ex a laoreet. Curabitur ac nisl ac lorem ullamcorper aliquet. Orci varius natoque penatibus.",
+    },
+    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    images: [
+      "/images/features/cargo/cargo1.png",
+      "/images/features/cargo/cargo2.png",
+      "/images/features/cargo/cargo3.png",
+      "/images/features/cargo/cargo4.png",
+    ],
+    longText: {
+      header: "Jakis tytul do opisu funkcji",
+      parafs: [
+        "Trasy, które nie mają przypisanej grupy tj. ładunku należy wybrać aby dodać do nowej grupy.",
+        "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
+        "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+      ],
+    },
+  },
+  {
+    id: "archiwum",
+    header: "head",
+    subheader: "sub head",
+    text: {
+      header: "Jakis naglowek krotki",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra ut ex a laoreet. Curabitur ac nisl ac lorem ullamcorper aliquet. Orci varius natoque penatibus.",
+    },
+    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    images: [
+      "/images/features/cargo/cargo1.png",
+      "/images/features/cargo/cargo2.png",
+      "/images/features/cargo/cargo3.png",
+      "/images/features/cargo/cargo4.png",
+    ],
+    longText: {
+      header: "Jakis tytul do opisu funkcji",
+      parafs: [
+        "Trasy, które nie mają przypisanej grupy tj. ładunku należy wybrać aby dodać do nowej grupy.",
+        "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
+        "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+      ],
+    },
+  },
+  {
+    id: "aktualizacje",
+    header: "head",
+    subheader: "sub head",
+    text: {
+      header: "Jakis naglowek krotki",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra ut ex a laoreet. Curabitur ac nisl ac lorem ullamcorper aliquet. Orci varius natoque penatibus.",
+    },
+    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    images: [
+      "/images/features/cargo/cargo1.png",
+      "/images/features/cargo/cargo2.png",
+      "/images/features/cargo/cargo3.png",
+      "/images/features/cargo/cargo4.png",
+    ],
+    longText: {
+      header: "Jakis tytul do opisu funkcji",
+      parafs: [
+        "Trasy, które nie mają przypisanej grupy tj. ładunku należy wybrać aby dodać do nowej grupy.",
+        "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
+        "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+      ],
+    },
+  },
 ];
