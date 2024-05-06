@@ -9,7 +9,6 @@ import { AnimationWrapper } from "../animations/AnimationWrapper";
 import { routes } from "../../routes";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-import { useState } from "react";
 import Modal from "../modal/Modal";
 import useModal from "../../useModal";
 

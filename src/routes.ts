@@ -15,6 +15,10 @@ export const routes = [
         href: "faktura",
       },
       {
+        subtitle: "CMR",
+        href: "cmr",
+      },
+      {
         subtitle: "Statystyki",
         href: "statystyki",
       },
