@@ -9,6 +9,9 @@ import { AnimationWrapper } from "../animations/AnimationWrapper";
 import { routes } from "../../routes";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { useState } from "react";
+import Modal from "../modal/Modal";
+import useModal from "../../useModal";
 
 const FeatureSpecificationV3 = () => {
   const { featureName } = useParams<{ featureName: string }>();
@@ -26,6 +29,8 @@ const FeatureSpecificationV3 = () => {
     }
     return acc;
   }, []);
+
+  const { isOpen, toggle } = useModal();
 
   if (selectedFeature) {
     const currentIndex = hrefs.indexOf(selectedFeature.id);
@@ -62,17 +67,13 @@ const FeatureSpecificationV3 = () => {
             </div>
             <AnimationFadeInWrapper listIndex={1}>
               <div className={style.video}>
-                <button className={style.videoBtn}>
+                <button className={style.videoBtn} onClick={toggle}>
                   <motion.span
                     initial={{
-                      borderWidth: "2px",
-                      borderStyle: "solid",
-                      borderColor: "transparent",
                       scale: 1,
                     }}
                     whileHover={{
                       scale: 1.15,
-                      borderColor: "#3d7f3a",
                       transition: { duration: 0.5 },
                     }}
                     className={style.border}
@@ -124,6 +125,11 @@ const FeatureSpecificationV3 = () => {
             </div>
           </div>
         </div>
+        <Modal
+          isOpen={isOpen}
+          videoLink={selectedFeature.videoLink}
+          toggle={toggle}
+        />
       </section>
     );
   }
@@ -137,10 +143,3 @@ const FeatureSpecificationV3 = () => {
 };
 
 export default FeatureSpecificationV3;
-
-<div className={style.cards}>
-  <div className={style.cardRow}>1</div>
-  <div className={style.cardRow}>2</div>
-  <div className={style.cardRow}>3</div>
-  <span className={style.void}></span>
-</div>;
