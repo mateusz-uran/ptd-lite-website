@@ -72,6 +72,7 @@ export const featureSpecification = [
       content:
         "Podczas podróży kierowcy zawodowi często mają do przewiezienia towary do wielu miejsc na trasie. Nasza aplikacja umożliwia wygodne grupowanie punktów trasy na podstawie tego samego ładunku. Dzięki temu użytkownik może efektywniej zarządzać swoimi dostawami, oszczędzając czas i pieniądze.",
     },
+    thumbLink: "/images/features/cargo/cargo_thumb.png",
     videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
     images: [
       "/images/features/cargo/cargo1.png",
@@ -100,7 +101,8 @@ export const featureSpecification = [
       content:
         "Nasza aplikacja umożliwia użytkownikom stworzenie szablonu faktury, który można łatwo wkleić do dokumentu. Wykorzystując informacje o stawkach według kraju kierowcy oraz przejechanych kilometrach, aplikacja automatycznie oblicza kwotę, którą należy uwzględnić na fakturze. Dzięki temu proces fakturowania staje się szybszy i bardziej efektywny, pozwalając kierowcom skupić się na prowadzeniu biznesu.",
     },
-    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    thumbLink: "/images/features/invoice/invoice_thumb.png",
+    videoLink: "https://youtu.be/zavFWPQtjNs",
     images: [
       "/images/features/invoice/invoice1.png",
       "/images/features/invoice/invoice2.png",
@@ -128,7 +130,8 @@ export const featureSpecification = [
       content:
         "Nasza aplikacja zawiera wbudowaną funkcję tworzenia listu przewozowego. Po wypełnieniu odpowiednich pól, gotowy szablon może być pobrany w formie pliku PDF. Dzięki temu kierowca ma pod ręką niezbędne narzędzie, z którego często korzysta w codziennej pracy.",
     },
-    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    thumbLink: "/images/features/cmr/cmr_thumb.png",
+    videoLink: "https://youtu.be/_eKX4KwTwKg",
     images: [
       "/images/features/cmr/cmr1.png",
       "/images/features/cmr/cmr2.png",
@@ -156,7 +159,8 @@ export const featureSpecification = [
       content:
         "Użytkownik, dodając kolejne karty i trasy, może również śledzić statystyki dotyczące przejechanych kilometrów oraz ilości utworzonych kart. Dzięki temu ma pełny ogląd na swoją aktywność i postępy w korzystaniu z aplikacji.",
     },
-    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    thumbLink: "/images/features/stats/stat_thumb.png",
+    videoLink: "https://youtu.be/DstL1nwgER4",
     images: [
       "/images/features/stats/stat1.png",
       "/images/features/stats/stat2.png",
@@ -184,7 +188,8 @@ export const featureSpecification = [
       content:
         "Użytkownik w archiwum ma dostęp do wszystkich kart drogowych, które dotychczas dodał. W domyślnej wersji aplikacji pobierane są trzy ostatnie karty, jednak dzięki funkcji archiwum można uzyskać dostęp do reszty kart. To zapewnia użytkownikowi pełną kontrolę i możliwość przeglądania historii wszystkich wcześniej dodanych kart drogowych.",
     },
-    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    thumbLink: "/images/features/arch/arch_thumb.png",
+    videoLink: "https://youtu.be/-JJXgcCpJxY",
     images: [
       "/images/features/arch/arch1.png",
       "/images/features/arch/arch2.png",
@@ -211,7 +216,8 @@ export const featureSpecification = [
       content:
         "Aplikacja posiada wbudowany system informowania użytkowników o nowościach i naprawach błedów. Odpowiedni przycisk na pasku nawigacyjnym zmienia kolor jeśli administrator wprowadzi jakieś zmiany.",
     },
-    videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
+    thumbLink: "/images/features/update/update_thumb.png",
+    videoLink: "https://youtu.be/cTBaOP6l1XI",
     images: [
       "/images/features/update/update1.png",
       "/images/features/update/update2.png",
@@ -221,13 +227,11 @@ export const featureSpecification = [
     longText: {
       header: "Aktualizacje aplikacji",
       parafs: [
-        "Trasy, które nie mają przypisanej grupy tj. ładunku należy wybrać aby dodać do nowej grupy.",
-        "Wybrane punkty są łączone w jedną grupę, która jest identyfikowana przez nazwę ładunku.",
-        "Po dodaniu sformatowana tabela pokazuje, które punkty należą do utworzonej grupy tj. ładunku.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed nisl at mauris volutpat tincidunt.",
+        "Aplikacja PTD jest stosunkowo nowa i może posiadać pewne błędy oraz jest otwarta na nowe funkcjonalności.",
+        "Użytkownicy nie zawsze czytają dokumentację, dlatego wbudowany system powiadamia ich o jakichkolwiek zmianach w formie nowych funkcji czy naprawionych błędów.",
+        "Po zalogowaniu się, aplikacja sprawdza, czy są nowe wiadomości od administratora. Jeśli tak, to na pasku bocznym przycisk aktualizacji ma odpowiedni kolor.",
+        "Użytkownik, po wejściu w panel informacji, może odznaczyć już przeczytane nowe informacje, co powoduje zmianę koloru przycisku na taki sam jak reszta panelu.",
+        "Ten system pozwala utrzymać komunikację między użytkownikami aplikacji, a jej administratorami.",
       ],
     },
   },

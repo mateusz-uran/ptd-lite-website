@@ -65,7 +65,13 @@ const FeatureSpecificationV3 = () => {
               </AnimationFadeInWrapper>
             </div>
             <AnimationFadeInWrapper listIndex={1}>
-              <div className={style.video}>
+              <div
+                className={style.video}
+                style={{
+                  backgroundImage: `url(${selectedFeature.thumbLink})`,
+                  backgroundSize: "cover",
+                }}
+              >
                 <button className={style.videoBtn} onClick={toggle}>
                   <motion.span
                     initial={{

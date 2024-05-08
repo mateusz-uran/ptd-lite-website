@@ -37,7 +37,6 @@ const HowItWorksWrapper = () => {
           </div>
           <div className={style.imgWrapper}>
             {howItWorkSteps.gifs.map((gifSrc, index) => (
-              /** TODO: create gif instead of images **/
               <AnimationWrapper
                 variantType="images"
                 listIndex={index}

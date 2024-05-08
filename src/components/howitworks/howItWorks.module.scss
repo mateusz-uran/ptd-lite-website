@@ -165,6 +165,9 @@
         .steps {
           width: 45%;
           margin-right: 1rem;
+          display: flex;
+          justify-content: space-between;
+
           .singleStep {
             width: 90%;
             border-radius: 5px;
