@@ -51,7 +51,7 @@ const SingleFeature = ({
       >
         <Icon className={style.icon} style={{ color: darkColor }} />
       </div>
-      <h4 className={style.h4}>{header}</h4>
+      <h2 className={style.h4}>{header}</h2>
       <p className={style.p}>{text}</p>
       <div className={style.btnWrapper}>
         <SecondaryButton task={null}>

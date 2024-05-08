@@ -42,9 +42,9 @@ const ExtendedSingleFeature = ({
       className={style.card}
     >
       <div className={style.featureImage}>
-        <img src={featureImage} alt="" />
+        <img src={featureImage} alt="feature-img" loading="lazy" />
       </div>
-      <h4 className={style.h4}>{header}</h4>
+      <h1 className={style.h4}>{header}</h1>
       <p className={style.p}>{text}</p>
       <div className={style.btnWrapper}>
         <SecondaryButton task={null}>

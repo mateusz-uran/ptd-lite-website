@@ -11,23 +11,29 @@ const Footer = () => {
       <div className={style.wrapper}>
         <div className={style.leftSide}>
           <span className={style.logoWrapper}>
-            <img src={"/images/logo_ptd3.png"} alt="PTD Logo" />
+            <img src={"/images/logo_ptd3.png"} alt="PTD Logo" loading="lazy" />
           </span>
           <span className={style.rights}>
             &#169; {year} Wszelkie prawa zastrzeżone.
           </span>
           <span className={style.socials}>
             <a href="https://github.com/mateusz-uran" target="_blank">
-              <FaGithub />
+              <div className={style.linkInner}>
+                <FaGithub />
+                <p>GitHub</p>
+              </div>
             </a>
             <a href="mailto: ptdlite@gmail.com">
-              <BiLogoGmail />
+              <div className={style.linkInner}>
+                <BiLogoGmail />
+                <p>Gmail</p>
+              </div>
             </a>
           </span>
         </div>
         <div className={style.rightSide}>
           <div className={style.column}>
-            <h5>Nawigacja</h5>
+            <h1>Nawigacja</h1>
             <ul>
               <li>
                 <Link to={"/"}>Strona główna</Link>
@@ -41,7 +47,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className={style.column}>
-            <h5>Dokumentacja i kod źródłowy</h5>
+            <h1>Dokumentacja i kod źródłowy</h1>
             <ul>
               <li>
                 <a
@@ -62,7 +68,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className={style.column}>
-            <h5>Kontakt</h5>
+            <h1>Kontakt</h1>
             <ul>
               <li>
                 <a href="https://github.com/mateusz-uran" target="_blank">

@@ -20,6 +20,7 @@ const PrimaryButton = ({
 
   return !isDisabled ? (
     <motion.button
+      type="button"
       onClick={handleClick}
       whileHover={{
         boxShadow: "rgba(61, 127, 58, 0.5) 0px 2px 6px",
@@ -37,7 +38,12 @@ const PrimaryButton = ({
       <IoIosArrowForward className="icon" />
     </motion.button>
   ) : (
-    <button disabled={isDisabled} className="primary-btn">
+    <button
+      disabled={isDisabled}
+      className="primary-btn"
+      type="button"
+      aria-label="Submit"
+    >
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ ease: "linear", duration: 1, repeat: Infinity }}

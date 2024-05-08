@@ -8,7 +8,11 @@ const Contact = () => {
       <div className={style.content}>
         <div className={style.mobile}>
           <AnimationWrapper variantType="text" listIndex={1}>
-            <img src="/images/dash mobile-portrait.png" />
+            <img
+              src="/images/dash mobile-portrait.png"
+              alt="mobile-portrait"
+              loading="lazy"
+            />
           </AnimationWrapper>
         </div>
         <ContactForm header="Masz pytania?">

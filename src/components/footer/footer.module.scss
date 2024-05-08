@@ -42,8 +42,21 @@
         font-size: $font-medium;
         color: $font-bright;
 
+        a {
+          padding: 1.5rem 0;
+          .linkInner {
+            display: flex;
+            align-items: center;
+
+            p {
+              font-size: $font-micro;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+
         a:last-child {
-          margin-left: 1rem;
+          margin-left: 2.5rem;
         }
       }
     }
@@ -58,12 +71,11 @@
         width: 100%;
         margin: 1rem 0;
 
-        h5 {
+        h1 {
           margin-bottom: 1rem;
           font-weight: 600;
           font-size: $font-small;
           color: $font-bright;
-          // text-wrap: nowrap;
         }
 
         ul {
@@ -74,7 +86,11 @@
             margin: 0.5rem 0;
             color: $font-bright;
             text-wrap: nowrap;
+
             a {
+              display: flex;
+              padding: 0.5rem 0;
+              width: fit-content;
               font-weight: 600;
             }
           }
@@ -106,7 +122,7 @@
         .column {
           height: 100%;
           padding: 0 0.5rem;
-          h5 {
+          h1 {
             min-height: 75px;
           }
           ul {

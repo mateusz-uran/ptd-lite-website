@@ -14,33 +14,37 @@ const HowItWorksPageV2 = () => {
                 <div className={style.textWrapper}>
                   <div className={style.abstraWrapper}>
                     <AnimationFadeInWrapper listIndex={1}>
-                      <img src="/images/howitworks/abstra.svg" alt="" />
+                      <img
+                        src="/images/howitworks/abstra.svg"
+                        alt="abstract-logo"
+                        loading="lazy"
+                      />
                     </AnimationFadeInWrapper>
                   </div>
                   <AnimationFadeInWrapper listIndex={stepIndex}>
-                    <h4>
+                    <h2>
                       Krok {stepIndex + 1}: {stepText.header}
-                    </h4>
+                    </h2>
                   </AnimationFadeInWrapper>
                   <AnimationFadeInWrapper listIndex={stepIndex}>
                     <p>{stepText.desc}</p>
                   </AnimationFadeInWrapper>
                   <ul>
                     {stepText.explanation.map((stepExt, extIndex) => (
-                      <div key={extIndex}>
+                      <li key={extIndex}>
                         <AnimationWrapper
                           variantType="text"
                           listIndex={extIndex}
                         >
-                          <li>{stepExt}</li>
+                          <p>{stepExt}</p>
                         </AnimationWrapper>
-                      </div>
+                      </li>
                     ))}
                   </ul>
                 </div>
                 <div className={style.imagesWrapper}>
                   <AnimationWrapper variantType="images" listIndex={1}>
-                    <img src={stepText.image} alt="" />
+                    <img src={stepText.image} alt="step-image" loading="lazy" />
                   </AnimationWrapper>
                 </div>
               </div>
@@ -56,14 +60,18 @@ const HowItWorksPageV2 = () => {
             </AnimationFadeInWrapper>
             <ul>
               {howItWorkSteps.summary.list.map((el, i) => (
-                <div key={i}>
+                <li key={i}>
                   <AnimationWrapper variantType="text" listIndex={i}>
-                    <li>
-                      <img src="/images/howitworks/check.svg" alt="" />
+                    <div className={style.point}>
+                      <img
+                        src="/images/howitworks/check.svg"
+                        alt="check-icon"
+                        loading="lazy"
+                      />
                       <p>{el}</p>
-                    </li>
+                    </div>
                   </AnimationWrapper>
-                </div>
+                </li>
               ))}
             </ul>
           </div>

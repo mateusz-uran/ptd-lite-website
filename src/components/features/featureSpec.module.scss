@@ -39,7 +39,7 @@
         font-size: $font-medium;
         color: $font-gray;
       }
-      h3 {
+      h1 {
         font-size: $font-large;
         color: $font-dark-gray;
       }
@@ -69,7 +69,7 @@
         margin: 1rem 0;
         background: transparent;
 
-        h5 {
+        h2 {
           font-size: $font-large;
           color: $font-dark-gray;
           margin-bottom: 1rem;
@@ -151,7 +151,7 @@
         margin-top: 2rem;
         margin-bottom: 5rem;
 
-        h4 {
+        h3 {
           font-size: $font-big;
           color: $font-bright;
           margin-left: 1rem;
@@ -164,9 +164,13 @@
           li {
             margin: 1rem;
             list-style-type: disc;
-            font-size: $font-small;
-            color: $font-gray;
-            font-weight: 600;
+            color: $font-gray-2;
+
+            p {
+              font-size: $font-small;
+              color: $font-gray-2;
+              font-weight: 600;
+            }
           }
         }
       }
@@ -280,7 +284,7 @@
           font-size: $font-small;
         }
 
-        h3 {
+        h1 {
           font-size: $font-large;
         }
       }

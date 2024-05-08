@@ -39,7 +39,7 @@ const NavbMobile = ({
 
   return (
     <nav ref={refList} className={style.nav}>
-      <img src={logo} alt="PTD logo" />
+      <img src={logo} alt="PTD logo" loading="lazy" />
       <AnimatePresence>
         {isOpen && (
           <motion.div

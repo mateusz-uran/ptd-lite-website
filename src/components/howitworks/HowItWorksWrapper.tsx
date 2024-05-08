@@ -28,7 +28,7 @@ const HowItWorksWrapper = () => {
                 <div className={style.singleStep}>
                   <span className={style.number}>{index + 1}</span>
                   <div className={style.textWrapper}>
-                    <h4>{step.header}</h4>
+                    <h3>{step.header}</h3>
                     <p>{step.desc}</p>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ const HowItWorksWrapper = () => {
                 listIndex={index}
                 key={index}
               >
-                <img src={gifSrc} />
+                <img src={gifSrc} alt="step-gif" loading="lazy" />
               </AnimationWrapper>
             ))}
           </div>

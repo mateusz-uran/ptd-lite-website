@@ -4,7 +4,6 @@ import { featureSpecification } from "../../content/featuresContent";
 import style from "./featureSpec.module.scss";
 import { AnimationFadeInWrapper } from "../animations/AnimationFadeIn";
 import { motion } from "framer-motion";
-import { Fragment } from "react/jsx-runtime";
 import { AnimationWrapper } from "../animations/AnimationWrapper";
 import { routes } from "../../routes";
 import { FaArrowLeft } from "react-icons/fa";
@@ -52,7 +51,7 @@ const FeatureSpecificationV3 = () => {
           <AnimationFadeInWrapper listIndex={1}>
             <div className={style.hTextWrapper}>
               <p>{selectedFeature.subheader}</p>
-              <h3>{selectedFeature.header}</h3>
+              <h1>{selectedFeature.header}</h1>
             </div>
           </AnimationFadeInWrapper>
         </div>
@@ -60,7 +59,7 @@ const FeatureSpecificationV3 = () => {
           <div className={style.wrapper}>
             <div className={style.textWrapper}>
               <AnimationFadeInWrapper listIndex={1}>
-                <h5>{selectedFeature.text.header}</h5>
+                <h2>{selectedFeature.text.header}</h2>
                 <p>{selectedFeature.text.content}</p>
               </AnimationFadeInWrapper>
             </div>
@@ -72,7 +71,11 @@ const FeatureSpecificationV3 = () => {
                   backgroundSize: "cover",
                 }}
               >
-                <button className={style.videoBtn} onClick={toggle}>
+                <button
+                  className={style.videoBtn}
+                  onClick={toggle}
+                  aria-label="play"
+                >
                   <motion.span
                     initial={{
                       scale: 1,
@@ -92,22 +95,22 @@ const FeatureSpecificationV3 = () => {
               {selectedFeature.images.map((image, index) => (
                 <div key={index} className={style.singleImg}>
                   <AnimationWrapper variantType="images" listIndex={index}>
-                    <img src={image} alt="" />
+                    <img src={image} alt="feature-spec-image" loading="lazy" />
                   </AnimationWrapper>
                 </div>
               ))}
             </div>
             <div className={style.explanation}>
               <AnimationFadeInWrapper listIndex={1}>
-                <h4>{selectedFeature.longText.header}</h4>
+                <h3>{selectedFeature.longText.header}</h3>
               </AnimationFadeInWrapper>
               <ul>
                 {selectedFeature.longText.parafs.map((text, index) => (
-                  <Fragment key={index}>
+                  <li key={index}>
                     <AnimationWrapper variantType="text" listIndex={index}>
-                      <li>{text}</li>
+                      <p>{text}</p>
                     </AnimationWrapper>
-                  </Fragment>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -120,7 +123,11 @@ const FeatureSpecificationV3 = () => {
               </Link>
             </div>
             <div className={style.logo}>
-              <img src="/images/features/qubes.svg" alt="" />
+              <img
+                src="/images/features/qubes.svg"
+                alt="qubes"
+                loading="lazy"
+              />
             </div>
             <div className={style.link}>
               <Link to={`/funkcje/${link2}`}>

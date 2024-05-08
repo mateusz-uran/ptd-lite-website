@@ -9,7 +9,7 @@ const Features = () => {
       <div className={style.wrapper}>
         <AnimationWrapper variantType="text" listIndex={0}>
           <div className={style.textWrapper}>
-            <h2 className={style.h2}>Dostępne funkcje</h2>
+            <h1 className={style.h2}>Dostępne funkcje</h1>
             <p>Główne zadania aplikacji</p>
           </div>
         </AnimationWrapper>

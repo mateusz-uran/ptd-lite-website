@@ -107,12 +107,12 @@
               }
             }
 
-            h4,
+            h2,
             p {
               margin: 2rem 0;
               font-weight: 400;
             }
-            h4 {
+            h2 {
               font-size: $font-large;
             }
 
@@ -124,34 +124,36 @@
               @include mixin.list-default();
 
               li {
-                align-items: center;
-                display: flex;
-                gap: 1rem;
-                font-size: $font-micro;
-                color: $font-dark-gray;
-                margin: 2rem 0;
+                p {
+                  align-items: center;
+                  display: flex;
+                  gap: 1rem;
+                  margin: 2rem 0;
+                  font-size: $font-micro;
+                  color: $font-dark-gray;
 
-                &::before {
-                  align-self: start;
-                  background-image: linear-gradient(
-                    45deg,
-                    hsl(117deg 37% 36%) 0%,
-                    hsl(140deg 42% 37%) 11%,
-                    hsl(154deg 46% 38%) 22%,
-                    hsl(163deg 44% 39%) 33%,
-                    hsl(170deg 38% 43%) 44%,
-                    hsl(177deg 30% 47%) 56%,
-                    hsl(183deg 24% 52%) 67%,
-                    hsl(188deg 21% 57%) 78%,
-                    hsl(194deg 16% 61%) 89%,
-                    hsl(199deg 9% 65%) 100%
-                  );
-                  border-radius: 100%;
-                  content: "";
-                  flex-shrink: 0;
-                  height: 1rem;
-                  margin-block-start: 0.3em;
-                  width: 1rem;
+                  &::before {
+                    align-self: start;
+                    background-image: linear-gradient(
+                      45deg,
+                      hsl(117deg 37% 36%) 0%,
+                      hsl(140deg 42% 37%) 11%,
+                      hsl(154deg 46% 38%) 22%,
+                      hsl(163deg 44% 39%) 33%,
+                      hsl(170deg 38% 43%) 44%,
+                      hsl(177deg 30% 47%) 56%,
+                      hsl(183deg 24% 52%) 67%,
+                      hsl(188deg 21% 57%) 78%,
+                      hsl(194deg 16% 61%) 89%,
+                      hsl(199deg 9% 65%) 100%
+                    );
+                    border-radius: 100%;
+                    content: "";
+                    flex-shrink: 0;
+                    height: 1rem;
+                    margin-block-start: 0.3em;
+                    width: 1rem;
+                  }
                 }
               }
             }
@@ -196,7 +198,7 @@
         ul {
           @include mixin.list-default();
 
-          li {
+          .point {
             font-size: $font-micro;
             display: flex;
             margin: 1rem 0;

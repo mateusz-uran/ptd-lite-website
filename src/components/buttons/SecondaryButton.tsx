@@ -25,6 +25,8 @@ export const SecondaryButton = ({ children, task }: SecondaryButtonProps) => {
       }}
       className="secondary-btn"
       onClick={handleClick}
+      type="button"
+      aria-label="Submit"
     >
       {children}
     </motion.button>

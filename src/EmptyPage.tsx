@@ -13,7 +13,7 @@ const EmptyPage = ({ message }: EmptyPageProps) => {
       <div className="error-page">
         <h3>{message}</h3>
         {error && <i>{error.statusText || error.message}</i>}
-        <img src="/images/empty.jpg" alt="" />
+        <img src="/images/empty.jpg" alt="empty-page" loading="lazy" />
         <SecondaryButton task={() => navigate(-1)}>
           <span>Wróć</span>
         </SecondaryButton>
