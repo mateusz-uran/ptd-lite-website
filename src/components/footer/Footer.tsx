@@ -1,3 +1,4 @@
+import logo from "/images/ptd_logo_medium.webp";
 import style from "./footer.module.scss";
 import { FaGithub } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
@@ -11,7 +12,7 @@ const Footer = () => {
       <div className={style.wrapper}>
         <div className={style.leftSide}>
           <span className={style.logoWrapper}>
-            <img src={"/images/logo_ptd3.png"} alt="PTD Logo" loading="lazy" />
+            <img src={logo} alt="PTD Logo" loading="lazy" />
           </span>
           <span className={style.rights}>
             &#169; {year} Wszelkie prawa zastrzeżone.

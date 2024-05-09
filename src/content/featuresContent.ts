@@ -1,28 +1,31 @@
-import { PiStackOverflowLogoBold } from "react-icons/pi";
 import { FaFileInvoiceDollar } from "react-icons/fa6";
+
 import { ImStatsDots } from "react-icons/im";
+
 import { BiSolidFileArchive } from "react-icons/bi";
+
 import { MdOutlineNewReleases } from "react-icons/md";
+
 import { GrDocumentText } from "react-icons/gr";
 
 export const features = [
   {
     header: "Dodawaj punkty trasy z tym samym ładunkiem do jednej grupy.",
     text: "Tworzenie ładunku pozwala połączyć odwiedzone punkty na podstawie przewożonego towaru, ustaw nazwę, tonaż oraz temepraturę - opcjonalnie dodaj notatki.",
-    Icon: PiStackOverflowLogoBold,
+    Icon: FaFileInvoiceDollar,
     darkColor: "#EC0868",
     lightColor: "#fde6f0",
     moreInfoLink: "ladunek",
-    featureImage: "/images/features/ladunek.png",
+    featureImage: "/images/features/cargo/cargo_small.webp",
   },
   {
     header: "Wygeneruj dane do faktury z przejechanej trasy.",
     text: "Wybierz punkty trasy z karty i stwórz fakturę na podstawie przejechanych kilometrów i dat z poszczególnych przystanków, dostosuj kurs walutowy, stawkę godzinową i skopiuj gotową templatkę do schowka.",
-    Icon: FaFileInvoiceDollar,
+    Icon: ImStatsDots,
     darkColor: "#FFA400",
     lightColor: "#fff6e6",
     moreInfoLink: "faktura",
-    featureImage: "/images/features/faktura.png",
+    featureImage: "/images/features/invoice/invoice_small.webp",
   },
   {
     header: "Stwórz dokument przewozowy czyli CMRkę z poziomu aplikacji.",
@@ -31,7 +34,7 @@ export const features = [
     darkColor: "#a080a0",
     lightColor: "#faf1fa",
     moreInfoLink: "cmr",
-    featureImage: "/images/features/cmr.png",
+    featureImage: "/images/features/cmr/cmr_small.webp",
   },
   {
     header: "Śledź statystyki ze swoich przejazdów.",
@@ -40,7 +43,7 @@ export const features = [
     darkColor: "#595ca8",
     lightColor: "#d4d5f2",
     moreInfoLink: "statystyki",
-    featureImage: "/images/features/stats.png",
+    featureImage: "/images/features/stats/stats_small.webp",
   },
   {
     header: "Wracaj do starych kart drogowych.",
@@ -49,7 +52,7 @@ export const features = [
     darkColor: "#5FAD41",
     lightColor: "#eff7ec",
     moreInfoLink: "archiwum",
-    featureImage: "/images/features/arch.png",
+    featureImage: "/images/features/arch/arch_small.webp",
   },
   {
     header: "Dostęp do listy z nowymi funkcjami i aktualizacjami poprawek.",
@@ -58,7 +61,7 @@ export const features = [
     darkColor: "#4BC6B9",
     lightColor: "#edf9f8",
     moreInfoLink: "aktualizacje",
-    featureImage: "/images/features/update.png",
+    featureImage: "/images/features/update/update_small.webp",
   },
 ];
 
@@ -72,13 +75,13 @@ export const featureSpecification = [
       content:
         "Podczas podróży kierowcy zawodowi często mają do przewiezienia towary do wielu miejsc na trasie. Nasza aplikacja umożliwia wygodne grupowanie punktów trasy na podstawie tego samego ładunku. Dzięki temu użytkownik może efektywniej zarządzać swoimi dostawami, oszczędzając czas i pieniądze.",
     },
-    thumbLink: "/images/features/cargo/cargo_thumb.png",
+    thumbLink: "/images/features/cargo/cargo_thumb.webp",
     videoLink: "https://www.youtube.com/watch?v=SlO58lWobYM",
     images: [
-      "/images/features/cargo/cargo1.png",
-      "/images/features/cargo/cargo2.png",
-      "/images/features/cargo/cargo3.png",
-      "/images/features/cargo/cargo4.png",
+      "/images/features/cargo/cargo1.webp",
+      "/images/features/cargo/cargo2.webp",
+      "/images/features/cargo/cargo3.webp",
+      "/images/features/cargo/cargo4.webp",
     ],
     longText: {
       header: "Tworzenie i przegląd grupy",
@@ -101,13 +104,13 @@ export const featureSpecification = [
       content:
         "Nasza aplikacja umożliwia użytkownikom stworzenie szablonu faktury, który można łatwo wkleić do dokumentu. Wykorzystując informacje o stawkach według kraju kierowcy oraz przejechanych kilometrach, aplikacja automatycznie oblicza kwotę, którą należy uwzględnić na fakturze. Dzięki temu proces fakturowania staje się szybszy i bardziej efektywny, pozwalając kierowcom skupić się na prowadzeniu biznesu.",
     },
-    thumbLink: "/images/features/invoice/invoice_thumb.png",
+    thumbLink: "/images/features/invoice/invoice_thumb.webp",
     videoLink: "https://youtu.be/zavFWPQtjNs",
     images: [
-      "/images/features/invoice/invoice1.png",
-      "/images/features/invoice/invoice2.png",
-      "/images/features/invoice/invoice3.png",
-      "/images/features/invoice/invoice4.png",
+      "/images/features/invoice/invoice1.webp",
+      "/images/features/invoice/invoice2.webp",
+      "/images/features/invoice/invoice3.webp",
+      "/images/features/invoice/invoice4.webp",
     ],
     longText: {
       header: "Jakis tytul do opisu funkcji",
@@ -130,13 +133,13 @@ export const featureSpecification = [
       content:
         "Nasza aplikacja zawiera wbudowaną funkcję tworzenia listu przewozowego. Po wypełnieniu odpowiednich pól, gotowy szablon może być pobrany w formie pliku PDF. Dzięki temu kierowca ma pod ręką niezbędne narzędzie, z którego często korzysta w codziennej pracy.",
     },
-    thumbLink: "/images/features/cmr/cmr_thumb.png",
+    thumbLink: "/images/features/cmr/cmr_thumb.webp",
     videoLink: "https://youtu.be/_eKX4KwTwKg",
     images: [
-      "/images/features/cmr/cmr1.png",
-      "/images/features/cmr/cmr2.png",
-      "/images/features/cmr/cmr3.png",
-      "/images/features/cmr/cmr4.png",
+      "/images/features/cmr/cmr1.webp",
+      "/images/features/cmr/cmr2.webp",
+      "/images/features/cmr/cmr3.webp",
+      "/images/features/cmr/cmr4.webp",
     ],
     longText: {
       header: "Wypełnianie formularza",
@@ -159,13 +162,13 @@ export const featureSpecification = [
       content:
         "Użytkownik, dodając kolejne karty i trasy, może również śledzić statystyki dotyczące przejechanych kilometrów oraz ilości utworzonych kart. Dzięki temu ma pełny ogląd na swoją aktywność i postępy w korzystaniu z aplikacji.",
     },
-    thumbLink: "/images/features/stats/stat_thumb.png",
+    thumbLink: "/images/features/stats/stat_thumb.webp",
     videoLink: "https://youtu.be/DstL1nwgER4",
     images: [
-      "/images/features/stats/stat1.png",
-      "/images/features/stats/stat2.png",
-      "/images/features/stats/stat3.png",
-      "/images/features/stats/stat4.png",
+      "/images/features/stats/stat1.webp",
+      "/images/features/stats/stat2.webp",
+      "/images/features/stats/stat3.webp",
+      "/images/features/stats/stat4.webp",
     ],
     longText: {
       header: "Jak działają statystyki",
@@ -188,13 +191,13 @@ export const featureSpecification = [
       content:
         "Użytkownik w archiwum ma dostęp do wszystkich kart drogowych, które dotychczas dodał. W domyślnej wersji aplikacji pobierane są trzy ostatnie karty, jednak dzięki funkcji archiwum można uzyskać dostęp do reszty kart. To zapewnia użytkownikowi pełną kontrolę i możliwość przeglądania historii wszystkich wcześniej dodanych kart drogowych.",
     },
-    thumbLink: "/images/features/arch/arch_thumb.png",
+    thumbLink: "/images/features/arch/arch_thumb.webp",
     videoLink: "https://youtu.be/-JJXgcCpJxY",
     images: [
-      "/images/features/arch/arch1.png",
-      "/images/features/arch/arch2.png",
-      "/images/features/arch/arch3.png",
-      "/images/features/arch/arch4.png",
+      "/images/features/arch/arch1.webp",
+      "/images/features/arch/arch2.webp",
+      "/images/features/arch/arch3.webp",
+      "/images/features/arch/arch4.webp",
     ],
     longText: {
       header: "Archiwizacja dodanych kart",
@@ -216,13 +219,13 @@ export const featureSpecification = [
       content:
         "Aplikacja posiada wbudowany system informowania użytkowników o nowościach i naprawach błedów. Odpowiedni przycisk na pasku nawigacyjnym zmienia kolor jeśli administrator wprowadzi jakieś zmiany.",
     },
-    thumbLink: "/images/features/update/update_thumb.png",
+    thumbLink: "/images/features/update/update_thumb.webp",
     videoLink: "https://youtu.be/cTBaOP6l1XI",
     images: [
-      "/images/features/update/update1.png",
-      "/images/features/update/update2.png",
-      "/images/features/update/update3.png",
-      "/images/features/update/update4.png",
+      "/images/features/update/update1.webp",
+      "/images/features/update/update2.webp",
+      "/images/features/update/update3.webp",
+      "/images/features/update/update4.webp",
     ],
     longText: {
       header: "Aktualizacje aplikacji",

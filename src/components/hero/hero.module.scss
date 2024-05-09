@@ -4,12 +4,11 @@
 .section {
   display: flex;
   justify-content: center;
-  background-image: url("/images/bg1.jpg");
+  background-image: url("/images/background1.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   align-items: center;
-  min-height: 60vh;
 
   .wrapper {
     @include mixin.wrapper();
@@ -44,7 +43,6 @@
     .wrapper {
       display: flex;
       margin-top: 3rem;
-      height: 60vh;
 
       .side {
         display: flex;

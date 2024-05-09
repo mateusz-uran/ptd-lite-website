@@ -1,6 +1,7 @@
 import { AnimationWrapper } from "../animations/AnimationWrapper";
 import style from "./contact.module.scss";
 import ContactForm from "./ContactForm";
+import mobile from "/images/dash-mobile-portrait.webp";
 
 const Contact = () => {
   return (
@@ -8,11 +9,7 @@ const Contact = () => {
       <div className={style.content}>
         <div className={style.mobile}>
           <AnimationWrapper variantType="text" listIndex={1}>
-            <img
-              src="/images/dash mobile-portrait.png"
-              alt="mobile-portrait"
-              loading="lazy"
-            />
+            <img src={mobile} alt="mobile-portrait" loading="lazy" />
           </AnimationWrapper>
         </div>
         <ContactForm header="Masz pytania?">

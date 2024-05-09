@@ -1,6 +1,6 @@
 import { content } from "../../content/heroContent";
 import PrimaryButton from "../buttons/PrimaryButton";
-import dashboard from "/images/dashboard_framed.png";
+import dashboard from "/images/dashboard.webp";
 import style from "./hero.module.scss";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ const Hero = () => {
     <section className={style.section}>
       {
         <div className={style.wrapper}>
-          <motion.div className={`${style.side} ${style.textSide}`}>
+          <div className={`${style.side} ${style.textSide}`}>
             <motion.h2
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -44,7 +44,7 @@ const Hero = () => {
                 isDisabled={false}
               />
             </motion.div>
-          </motion.div>
+          </div>
           <motion.div
             initial={{ x: 400, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}

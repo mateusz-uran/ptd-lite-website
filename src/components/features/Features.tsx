@@ -17,6 +17,7 @@ const Features = () => {
           {features.map((feat, idx) => {
             const { header, text, Icon, darkColor, lightColor, moreInfoLink } =
               feat;
+
             return (
               <SingleFeature
                 key={idx}
