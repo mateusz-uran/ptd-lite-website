@@ -52,7 +52,7 @@ const Hero = () => {
             className={`${style.side} ${style.imgSide}`}
           >
             <div className={style.imgWrapper}>
-              <img src={dashboard} alt="PTD Lite Dashboard" loading="lazy" />
+              <img src={dashboard} alt="PTD Lite Dashboard" />
             </div>
           </motion.div>
         </div>
